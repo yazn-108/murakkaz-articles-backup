@@ -15,8 +15,11 @@ if (!Array.isArray(articles)) {
 }
 if (eventType === "article.created") {
   if (!articles.find(a => a._id === payload._id)) {
-    articles.push(payload)
+    articles.push(payload);
   }
+  articles.sort((a, b) =>
+    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
 }
 if (eventType === "article.updated") {
   articles = articles.map(a =>

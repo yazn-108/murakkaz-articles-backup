@@ -102,5 +102,62 @@
     "slug": "tailwind-hover-variables",
     "tag": "tailwind",
     "title": "الـhover والـvariables في tailwind بعد اخر تحديث"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d661fe2bb54b5c28fd5d29",
+    "banner": {
+      "alt": "destructuring code image",
+      "public_id": "gjeer0ixjm5sr6q9y2wc",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757430045/gjeer0ixjm5sr6q9y2wc.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "الـDestructuring في JavaScript فكرته بسيطة جدًا: يخليك تختصر وتوضح الكود بدل ما تكتب أسطر طويلة عشان توصل لقيمة من Array أو Object، يعني بدل ما تعيد وتكرر .name و .age كل شوي، تقدر تستخرج القيم مرة واحدة وتحطها في متغيرات.\n\nالميزة الحلوة إنه مو بس يختصر الكود، كمان يخليك تتعامل مع بيانات متداخلة بسهولة، وتقدر تحط قيم افتراضية لها إذا ما تم العثور على بعض القيم لسبب ما، وهذا مهم خصوصًا لو البيانات جاية من API أو مصدر خارجي، عشان ما يحصل أخطاء غير متوقعة.\n\nبالمختصر: الكود يصير أنظف، أسهل، وآمن.",
+        "id": "68c07dcf1c7c50bd1de8b263",
+        "image": null,
+        "title": "ما الهدف من استخدامها؟"
+      },
+      {
+        "code": null,
+        "content": "من ناحية تأثيره على الاداء فلا يوجد اي تأثير بين",
+        "id": "68c07dcf1c7c50bd1de8b264",
+        "image": null,
+        "title": "تأثير Destructuring على الأداء"
+      },
+      {
+        "code": {
+          "content": "const numbers = [1, 2, 3];\nconst first = numbers[0];\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst name = person.name;",
+          "language": "javascript"
+        },
+        "content": "الطريقة المعتادة:",
+        "id": "68c07dcf1c7c50bd1de8b265",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "const [a, b, c] = [1, 2, 3];\nconsole.log(a); // 1\nconsole.log(b); // 2\nconsole.log(c); // 3\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst { name = 'الاسم الافتراضي', age } = person;\nconsole.log(name); // Yazan\nconsole.log(age);  // 22",
+          "language": "javascript"
+        },
+        "content": "وطريقة الـDestructuring:",
+        "id": "68c07dcf1c7c50bd1de8b266",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "إلا في حالات محدودة جدًا يكون التأثير شبه معدوم، ويحصل هذا عند استخدام الـDestructuring بكثرة داخل نفس الـscope، وهذا يرجع لعملية التفكيك (destructuring) التي تتطلب معالجة إضافية من قبل محرك JavaScript في الخلفية. ومع هذا، مثل ماذكرت، هذا التأثير نادراً ما يكون ملحوظ ولا يؤثر على الأداء العملي للتطبيقات العادية، ولكن من باب الإشارة إلى أن هناك تكلفة صغيرة جدًا على المستوى الداخلي لمحرك اللغة عند الاستخدام المكثف للغاية. (وتقدر تعتبر هذه الجزئية غير موجودة 🙃)",
+        "id": "68c07dcf1c7c50bd1de8b267",
+        "image": null,
+        "title": null
+      }
+    ],
+    "createdAt": "2024-03-06T00: 00: 00.000Z",
+    "description": "الـDestructuring هو طريقة لاستخراج البيانات من الـArrays أو الـObjects على شكل متغيرات جديدة بطريقة مختصرة وسهلة، بدلًا من الكتابة التقليدية.",
+    "slug": "destructuring-in-javascript",
+    "tag": "JavaScript",
+    "title": "الـDestructuring في JavaScript"
   }
 ]

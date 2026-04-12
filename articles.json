@@ -210,5 +210,42 @@
     "slug": "open-graph",
     "tag": "SEO",
     "title": "اظهار بيانات محددة عند مشاركة رابط الموقع"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d8f798b462f2a74b60b32c",
+    "banner": {
+      "alt": "proxy-vs-middleware",
+      "public_id": "elwnby9rkuznoiyus0zc",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1765900435/elwnby9rkuznoiyus0zc.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "هو فرق تسميات لا اكثر، السبب يعود إلى ان الفريق المطور لـnextjs رأى ان اسم middleware لا يعبر عن مهمة الملف او انه اسم كبير على ما يقوم به الملف بشكل فعلي من تنفيذ بعض المهام البسيطة عند فتح الموقع مثل التحقق من بعض الشروط الحساسة بحكم ان nextjs تعتبر full stack framework بحيث تستطيع عمل back end و front end (مع انه ليس شيء صحيح الاعتماد عليه في الباك اند خاصة اذا كان موقع فيه بيانات حساسة) فتم تحويله إلى proxy لأنه يعبر عن مهمة الملف الفعلية بحيث يكون عبارة عن طبقة اثناء تنفيذ البرنامج او جزء من البرنامج.",
+        "id": "69418325833c4c99c6c9c0d4",
+        "image": null,
+        "title": "بكل اختصار"
+      },
+      {
+        "code": null,
+        "content": "فقط قم بتغيير اسم ملف middleware.ts إلى proxy.ts",
+        "id": "69418325833c4c99c6c9c0d5",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "[https://nextjs.org/docs/messages/middleware-to-proxy](https://nextjs.org/docs/messages/middleware-to-proxy)",
+        "id": "69418325833c4c99c6c9c0d6",
+        "image": null,
+        "title": null
+      }
+    ],
+    "createdAt": "2025-12-16T00: 00: 00.000Z",
+    "description": "بعد نسخة nextjs 16 اكيد انك لاحظت ظهور رسالة في الترمنال تقول “The 'middleware' file convention is deprecated. Please use 'proxy' instead.”",
+    "slug": "proxy-vs-middleware",
+    "tag": "react-nextjs",
+    "title": "الفرق بين middleware و proxy بعد اخر تحديث في nextjs"
   }
 ]

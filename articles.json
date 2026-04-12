@@ -154,7 +154,7 @@
         "title": null
       }
     ],
-    "createdAt": "2024-03-06T00: 00: 00.000Z",
+    "createdAt": "2024-03-06T00:00:00.000Z",
     "description": "الـDestructuring هو طريقة لاستخراج البيانات من الـArrays أو الـObjects على شكل متغيرات جديدة بطريقة مختصرة وسهلة، بدلًا من الكتابة التقليدية.",
     "slug": "destructuring-in-javascript",
     "tag": "JavaScript",

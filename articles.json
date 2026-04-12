@@ -40,7 +40,7 @@
         "title": "شكل استخدامه"
       }
     ],
-    "createdAt": "2025-12-27T00: 00: 00.000Z",
+    "createdAt": "2025-12-27T00:00:00.000Z",
     "description": "ميزة جديدة وجميلة من react للتعامل مع اظهار واخفاء المكونات وتحسين الاداء",
     "slug": "activity-component-react",
     "tag": "react-nextjs",

@@ -1,0 +1,49 @@
+[
+  {
+    "SubscribersNotified": true,
+    "_id": "69d8f872b462f2a74b60b330",
+    "banner": {
+      "alt": "activity-component-react",
+      "public_id": "tufr9mwxi9yvfsmzkmnl",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1766838129/tufr9mwxi9yvfsmzkmnl.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "تم اطلاق Activity component في react 19.2 للتعامل مع اخفاء واظهار العناصر بشكل مناسب للاداء ولتقليل العمليات الغير ضرورية اثناء تصفح موقعك المبني باستخدام react وما يتبعها.",
+        "id": "694fd869127f09fda67e340e",
+        "image": null,
+        "title": "ماهو <Activity />"
+      },
+      {
+        "code": null,
+        "content": "عند الاغلاق باستخدام useState او باستخدام الشروط عموما (if - else) يتم اعادة تصفير قيم الجزء المخفي وهذا لوحده يعتبر اداء اضافي على موارد الجهاز وسرعة الموقع\nواذا قمت بالاخفاء عبر css باستخدام display: none; فكانك يابو زيد ما غزيت لأن انت نعم اخفيت العنصر ولكن كامل العنصر مازال شغال بكامل عملياته في الخلفية وهذا حمل على الذاكره وعلى موارد الجهاز",
+        "id": "694fd869127f09fda67e340f",
+        "image": null,
+        "title": "ما علاقته بتحسين الاداء؟"
+      },
+      {
+        "code": null,
+        "content": "وهنا فكرة Activity component تظهر بقوة بحيث انه يمكنك من اخفاء العنصر بالاضافة لايقاف عملياته بشكل حرفي يعني حتى تصفير القيم لن يتم، يعني لو كان عندك input مكتوب بداخله “السلام عليكم ورحمة الله وبركاته” واغلقت الفورم او الـinput ورجعت فتحته رح تلاقي “السلام عليكم ورحمة الله وبركاته” موجودة كما هي وهنا استفدنا امرين\n\nاولا ما سببنا حمل اضافي على الموقع\nثانيا حافظنا على البيانات للرجوع لها (لأن في بعض الحالات نحتاج هذا الموضوع)",
+        "id": "694fd869127f09fda67e3410",
+        "image": null,
+        "title": "ماهي فكرته؟"
+      },
+      {
+        "code": {
+          "content": "import { Activity, useState } from 'react';\nimport AdminSettings from './_components/AdminSettings';\nconst page = () => {\n  const [IsOpen, setIsOpen] = useState<boolean>(false);\n  return (\n    <div>\n      <Activity mode={IsOpen ? 'visible': 'hidden'}>\n        <AdminSettings />\n      </Activity>\n    </div>\n  );\n};\nexport default page;",
+          "language": "tsx"
+        },
+        "content": null,
+        "id": "694fd869127f09fda67e3411",
+        "image": null,
+        "title": "شكل استخدامه"
+      }
+    ],
+    "createdAt": "2025-12-27T00: 00: 00.000Z",
+    "description": "ميزة جديدة وجميلة من react للتعامل مع اظهار واخفاء المكونات وتحسين الاداء",
+    "slug": "activity-component-react",
+    "tag": "react-nextjs",
+    "title": "ماهو <Activity /> في عالم react؟"
+  }
+]

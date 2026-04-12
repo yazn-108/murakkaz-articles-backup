@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
 
-      - run: node backup/scripts/event-handler.js
+      - run: node backup/scripts/backup-events-handler.js
         env:
           EVENT_TYPE: ${{ github.event.action }}
           PAYLOAD: ${{ toJson(github.event.client_payload) }}

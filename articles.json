@@ -159,5 +159,56 @@
     "slug": "destructuring-in-javascript",
     "tag": "JavaScript",
     "title": "الـDestructuring في JavaScript"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d6609f2bb54b5c28fd5d27",
+    "banner": {
+      "alt": "open graph image",
+      "public_id": "v3eenjpmqzuuekiw0qj1",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757258679/v3eenjpmqzuuekiw0qj1.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "تستخدم لعرض بيانات عن محتويات الرابط عند مشاركته كما في الصورة وهذا الامر يرفع نسبة الثقة عند المستخدمين ويظهر موقعك بشكل احترافي.",
+        "id": "68fba97b1179ed83cf797af2",
+        "image": {
+          "alt": "yazn open graph in linkedin",
+          "public_id": "eifmakyi9cmim2pbhtra",
+          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757259363/eifmakyi9cmim2pbhtra.png"
+        },
+        "title": "ماهي نتيجة استخدام meta tags؟"
+      },
+      {
+        "code": {
+          "content": "<!-- HTML Meta Tags -->\n<title>Front End Web Developer</title>\n<meta name='description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n\n<!-- Facebook Meta Tags -->\n<meta property='og:url' content='https: //yazn-108.github.io/'>\n<meta property='og:type' content='website'>\n<meta property='og:title' content='Front End Web Developer'>\n<meta property='og:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta property='og:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Twitter Meta Tags -->\n<meta name='twitter:card' content='summary_large_image'>\n<meta property='twitter:domain' content='yazn-108.github.io'>\n<meta property='twitter:url' content='https://yazn-108.github.io/'>\n<meta name='twitter:title' content='Front End Web Developer'>\n<meta name='twitter:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta name='twitter:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Meta Tags Generated via https: //www.opengraph.xyz -->",
+          "language": "html"
+        },
+        "content": "الـOpen Graph هو بروتوكول (Open Graph Protocol) أنشأته شركة فيسبوك سنة 2010، والغرض منه هو جعل أي رابط على الانترنت يتم مشاركة مع بعض التفاصيل عن محتويات الرابط يتم تحديدها من قبل صاحب الصفحة التابع لها الرابط.",
+        "id": "68fba97b1179ed83cf797af3",
+        "image": null,
+        "title": "ماهو open graph؟"
+      },
+      {
+        "code": null,
+        "content": "من خلال الدخول إلى موقع [www.opengraph.xyz](https://www.opengraph.xyz) تقوم بادخل رابط موقعك وهو يعطيك الاكواد الاساسية مع اضافة البيانات التي استطاع التعرف عليها ولكن هذا لا يمنع من انك تحتاج للتعديل عليها بشكل يدوي.",
+        "id": "68fba97b1179ed83cf797af4",
+        "image": null,
+        "title": "كيف يمكن توليدها بشكل تلقائي؟"
+      },
+      {
+        "code": null,
+        "content": "فعليا الـOpen Graph ليس له تدخل فعلي في ارشفة موقعك في نتائج بحث Google على سبيل المثال ولكن كثرة النقر على رابط موقعك بسبب شكلة الاحترافي يساهم في زيادة موثوقيته عند محركات بحث Google وهنا يأتي دور الـMeta Tags التي سوف اتكلم عنها بشكل بسيط لأن سيتم الحديث عنها في مقالة منفصلة إن شاء الله؛ الـMeta Tags تساعد محركات البحث (مثل Google و Bing) على فهم محتوى موقعك وبالتالي تعطيه ترتيب في نتائج البحث عندما يقوم احد المستخدمين بالبحث عن شيء موقعك له ارتباط فيه.",
+        "id": "68fba97b1179ed83cf797af5",
+        "image": null,
+        "title": "ما دور Meta Tags وOpen Graph في تحسين ظهور صفحات الويب على محركات البحث ومنصات التواصل الاجتماعي؟"
+      }
+    ],
+    "createdAt": "2024-05-14T00: 00: 00.000Z",
+    "description": "الـOpen Graph هي مجموعة وسوم خاصة بالشبكات الاجتماعية (Facebook, LinkedIn, Twitter...). وظيفتها تحديد كيف يظهر رابط موقعك عند مشاركته (العنوان، الوصف، الصورة).",
+    "slug": "open-graph",
+    "tag": "SEO",
+    "title": "اظهار بيانات محددة عند مشاركة رابط الموقع"
   }
 ]

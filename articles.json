@@ -462,5 +462,102 @@
     "slug": "react-design-patterns",
     "tag": "react-nextjs",
     "title": "ماهو React Design Patterns?"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d8ef84b462f2a74b60b328",
+    "banner": {
+      "alt": "ECMAScript 2023 (ES2023)",
+      "public_id": "kwjihdolpzixhwpclgol",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1758984620/kwjihdolpzixhwpclgol.jpg"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "بعد اخر تحديثات صدرت في ECMAScript 2023 (ES2023) ظهرت methods لحل مشكلة مزعجة موجودة في javascript بشكل عام وهي مشكلة تغير ترتيب قيم الـarray الاصلية في حال قمت باجراء اي تعديل على الـarray في اي جزء من كود الموقع بدل اخذ نسخة منها والتعديل عليها دون التعديل على الـarray الاصلية.",
+        "id": "69418509833c4c99c6c9c0e1",
+        "image": null,
+        "title": "مقدمة"
+      },
+      {
+        "code": {
+          "content": "const numbers = [3,1, 2];\nnumbers.sort();\nconsole.log(numbers); // [1, 2, 3]",
+          "language": "javascript"
+        },
+        "content": "مثلا لو كتبت",
+        "id": "69418509833c4c99c6c9c0e2",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "النتيجة رح تكون ان الـarray الاصلية تغير ترتيب قيمها وهنا المشكلة وتظهر بشكل اكبر في react لأن احيانا يكون معتمد على نفس الـarray  عدة اجزاء من الموقع فمن الغير المنطقي التعديل على الـarray في مكان في الموقع ثم يصل تأثير هذا التعديل لبقية اجزاء الموقع وهنا ظهر الحل وهو ان",
+        "id": "69418509833c4c99c6c9c0e3",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "const numbers = [3, 1, 2];\nconst sortedArray = numbers.toSorted();\nconsole.log(sortedArray); // [1, 2, 3]\nconsole.log(numbers); // [3, 1, 2] -> لم تتغير",
+          "language": "javascript"
+        },
+        "content": null,
+        "id": "69418509833c4c99c6c9c0e4",
+        "image": null,
+        "title": "الـsort اصبح بديلها .toSorted()"
+      },
+      {
+        "code": {
+          "content": "const letters = ['a', 'b', 'c'];\nconst reversedLetters = letters.toReversed();\nconsole.log(reversedLetters); // ['c', 'b', 'a']\nconsole.log(letters); // ['a', 'b', 'c'] -> لم تتغير",
+          "language": "javascript"
+        },
+        "content": null,
+        "id": "69418509833c4c99c6c9c0e5",
+        "image": null,
+        "title": "الـreverse اصبح بديلها .toReversed()"
+      },
+      {
+        "code": {
+          "content": "const skills = ['javascript', 'typescript', 'nextjs'];\nconst removeSkill = skills.toSpliced(0, 1);\nconsole.log(removeSkill); // [\"typescript\", \"nextjs\"]\nconsole.log(skills); // [\"javascript\", \"typescript\", \"nextjs\"] -> لم تتغير\n",
+          "language": "javascript"
+        },
+        "content": null,
+        "id": "69418509833c4c99c6c9c0e6",
+        "image": null,
+        "title": "الـsplice اصبح بديلها .toSpliced()"
+      },
+      {
+        "code": {
+          "content": "const numbers = [3, 1, 2];\nconst updatedArray = numbers.with(0, 10);\nconsole.log(updatedArray); // [10, 1, 2]\nconsole.log(numbers);      // [3, 1, 2] -> لم تتغير",
+          "language": "javascript"
+        },
+        "content": null,
+        "id": "69418509833c4c99c6c9c0e7",
+        "image": null,
+        "title": ".with()"
+      },
+      {
+        "code": {
+          "content": "const arr = [3, 1, 2];\n\nconst newArr = [...arr]; // النسخة اليدوية\nnewArr.sort();\nconsole.log(newArr); // [1, 2, 3]\n\nconsole.log(arr); // [3, 1, 2]",
+          "language": "javascript"
+        },
+        "content": "الحل بسيط وهو ان نقوم بعمل نسخة بشكل يدوي بهذا الشكل",
+        "id": "69418509833c4c99c6c9c0e8",
+        "image": null,
+        "title": "قد يقول قائل"
+      },
+      {
+        "code": null,
+        "content": "[https://allthingssmitty.com/](https://allthingssmitty.com/2025/09/08/finally-safe-array-methods-in-javascript/)",
+        "id": "69418509833c4c99c6c9c0ea",
+        "image": null,
+        "title": "المصدر"
+      }
+    ],
+    "createdAt": "2025-09-27T00: 00: 00.000Z",
+    "description": "نسخ الـarrays بدل التأثيير عليها.",
+    "slug": "safe-array-methods",
+    "tag": "JavaScript",
+    "title": "حماية الـarray في JavaScript"
   }
 ]

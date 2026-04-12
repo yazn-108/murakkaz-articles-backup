@@ -242,7 +242,7 @@
         "title": null
       }
     ],
-    "createdAt": "2025-12-16T00: 00: 00.000Z",
+    "createdAt": "2025-12-16T00:00:00.000Z",
     "description": "بعد نسخة nextjs 16 اكيد انك لاحظت ظهور رسالة في الترمنال تقول “The 'middleware' file convention is deprecated. Please use 'proxy' instead.”",
     "slug": "proxy-vs-middleware",
     "tag": "react-nextjs",

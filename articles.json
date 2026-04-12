@@ -247,5 +247,220 @@
     "slug": "proxy-vs-middleware",
     "tag": "react-nextjs",
     "title": "الفرق بين middleware و proxy بعد اخر تحديث في nextjs"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d8f637b462f2a74b60b32a",
+    "banner": {
+      "alt": "react-design-patterns",
+      "public_id": "yu0d9111zjoc7bq1q3fr",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1760987592/yu0d9111zjoc7bq1q3fr.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "الـDesign Patterns هي طرق أو أساليب احترافية لتنظيم وكتابة الكود في React، بحيث يكون الكود نظيف، قابل لإعادة الاستخدام، وسهل الصيانة مع نمو المشروع.\n\nلما مشروعك يبدأ يكبر، الكود بيبدأ 'يتعقد' — تلاقي نفسك تكرر منطق، تعمل تغييرات كثيرة في أماكن مختلفة، أو تضيف ميزة فتتكسر مية حاجة بعدها.\nهنا تأتي الـDesign Patterns كمنقذ، بتعطيك حلول ذكية ومنظّمة للمشاكل هذه؛ فالـDesign Patterns ليست مجرد قواعد أو طريقة كتابة، هي <strong>خطة واضحة</strong> تساعدك تتعامل مع المشاكل اللي تواجهك يوميًا في تطوير\n\nخلينا من الكلام النظري وندخل في الامثلة العملية لأن الدزاين باترنس اما انك تتعلمها بشكل عملي او انك رح تواجه صعوبة في استخدامها فيما بعد او حتى معرفة اهميتها…..",
+        "id": "69060f9cd348c659ddd09dc9",
+        "image": null,
+        "title": "اهمية استخدام Design Patterns"
+      },
+      {
+        "code": {
+          "content": " // app/_components/Card.tsx\nexport default function Card({ children }: { children: React.ReactNode }) {\n  return <div className='card rounded-md'>{children}</div>;\n}\nCard.Title = function Title() {\n  return (\n    <div>\n      <h3>Card Title</h3>\n    </div>\n  );\n};\nCard.Content = function Content({ children }: { children: React.ReactNode }) {\n  return (\n    <div>\n      <p>{children}</p>\n    </div>\n  );\n};\nCard.Action = function Action() {\n  return (\n    <div>\n      <button>Action</button>\n    </div>\n  );\n};\nCard.Footer = function Footer() {\n  return (\n    <div>\n      <p>Card footer</p>\n    </div>\n  );\n};",
+          "language": "tsx"
+        },
+        "content": "قبل ما اعرف عن هذا النمط رح اقلك ان هذا النمط هو اللي جذبني لموضوع الـDesign Patterns اما عن تعريفه فهو نمط فكرته تكمن في امكانية استخدام عدة مكونات من من مكون واحد بمعنى لو عندك Card.tsx انت يمكن في مكان ما في الموقع تريد عرض كامل الـCard وفي مكان آخر تريد عرض مثلا الـCard بدون صورة وفي مكان آخر مع فيديو فمن غير الاحترافي انك تمرر prop لكل ميزة وبنفس الوقت من اهم قواعد البرمجة عدم تكرار الكود اللي تسويه فما رح يكون امر احترافي انك تسوي component منفصل لكل ميزة فهنا تأتي جمايلة Compound Components Pattern \n(وطبعا المثال السابق هو احد استخداماته لأن يمكن استخدامه بفكرة رح اشير لها في الاسفل بعد ما اعرضلك كود عن هذا الـPattern الجميل)",
+        "id": "69060f9cd348c659ddd09dca",
+        "image": null,
+        "title": "Compound Components Pattern"
+      },
+      {
+        "code": {
+          "content": " // app/page.tsx\n<Card>\n  <Card.Title />\n  <Card.Content>123</Card.Content>\n  <Card.Action />\n  <Card.Footer />\n</Card>;",
+          "language": "tsx"
+        },
+        "content": "النتيجة او آلية الاستخدام...",
+        "id": "69060f9cd348c659ddd09dcb",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": " // app/_Articles/_components/ArticlesState.tsx\nimport React from 'react';\nconst ArticlesState = ({ children }: { children: React.ReactNode }) => {\n  return <div>{children}</div>;\n};\nArticlesState.loading = function Loading() {\n  return (\n    <div>\n      <h2> جار تحميل المقالات</h2>\n    </div>\n  );\n};\nArticlesState.error = function Error() {\n  return (\n    <div>\n      <h2>حدث خطأ في تحميل المقالات</h2>\n    </div>\n  );\n};\nArticlesState.empty = function empty() {\n  return (\n    <section>\n      <h2>لا يوجد مقالات بعد...</h2>\n    </section>\n  );\n};\nexport default ArticlesState;",
+          "language": "tsx"
+        },
+        "content": "اما الفكرة اللي قلت اني رح اشير لها بخصوص هذا النمط هي استخدام هذا النمط لعرض مثلا رسائل الركويستات او حتى التنبيهات اللي تظهر بشكل عائم امام اليوزر في حال ما حبيت تستخدم مكاتب جاهزة",
+        "id": "69060f9cd348c659ddd09dcc",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": " // app/page.tsx\nconst Articles = dynamic(() => import('./_Articles/Articles'), {\n  loading: () => (\n    <ArticlesState>\n      <ArticlesState.loading />\n    </ArticlesState>\n  ),\n});",
+          "language": "tsx"
+        },
+        "content": "احد اشكال الاستدعاء",
+        "id": "69060f9cd348c659ddd09dcd",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "وهنا جينا لعنوان رنان في عالم البرمجة وهو الـclean code او الكود النظيف لأن هذا النمط او الـPattern رح يساعدك في هذا الامر؛ الـContainer Presentational Pattern هو نمط يقلك تعلم انك تفصل المنطق البرمجي عن اجزاء العرض حتى يكون الكود سهل الفهم والتتبع والتصحيح او التعديل بمعنى تخيل مثلا عندك صفحة تحتوي على ارسال واستقبال وتعديل وحذف بيانات (جميع العمليات التي تندرج تحت مفهوم CRUD) بالاضافة للكود اللي يعرض نتيجة هذه العمليات... هنا هل تشوف ان الكود رح يكون مقبول شكليا او على الاقل سهل التعامل معاه؟ خاصة عند محاولة اضافة او تغيير ميزة هنا رح تشوف المعنى الحرفي لمصطلح الـspaghetti code\n\nوهنا يأتي دور الـContainer Presentational Pattern بحيث ينبهك إلى ان تقوم بفصل كود او واجهة العرض عن المنطق البرمجي",
+        "id": "69060f9cd348c659ddd09dce",
+        "image": null,
+        "title": "Container-Presentational Pattern"
+      },
+      {
+        "code": {
+          "content": " // app/_Articles/Articles.tsx\n'use client';\nimport axios from 'axios';\nimport { useInfiniteQuery } from '@tanstack/react-query';\nimport { useEffect } from 'react';\nimport { useInView } from 'react-intersection-observer';\nimport PresentationalArticles from './PresentationalArticles';\nimport { ArticlesResponse } from '@/types/Articles';\nexport default function Articles({\n  initialArticles,\n  tag,\n}: {\n  initialArticles: ArticlesResponse;\n  tag?: string;\n}) {\n  const {\n    data,\n    fetchNextPage,\n    hasNextPage,\n    isFetchingNextPage,\n    isLoading,\n    isError,\n  } = useInfiniteQuery({\n    queryKey: ['articles', tag],\n    queryFn: ({ pageParam = 1 }) =>\n      axios\n        .get(\n          !tag\n            ? `/api/articles?page=${pageParam}&limit=6`\n            : `/api/tags/${tag}?page=${pageParam}&limit=6`\n        )\n        .then((res) => res.data as ArticlesResponse),\n    getNextPageParam: (lastPage) =>\n      lastPage.pagination?.hasMore ? lastPage.pagination.page + 1 : undefined,\n    initialData: {\n      pages: [initialArticles!],\n      pageParams: [1],\n    },\n    initialPageParam: 1,\n  });\n  const { ref, inView } = useInView({\n    threshold: 0,\n    rootMargin: '1000px',\n  });\n  useEffect(() => {\n    if (inView && hasNextPage && !isFetchingNextPage) {\n      fetchNextPage();\n    }\n  }, [inView, hasNextPage, isFetchingNextPage, fetchNextPage]);\n  const articles =\n    data?.pages\n      .flatMap((page) => page.articles)\n      .filter((article) => article?._id && article?.slug)\n      .filter(\n        (article, index, self) =>\n          index === self.findIndex((a) => a?._id === article?._id)\n      ) || [];\n  return (\n    <PresentationalArticles\n      isLoading={isLoading}\n      isError={isError}\n      articles={articles}\n      hasNextPage={hasNextPage}\n      inViewRef={ref}\n    />\n  );\n}",
+          "language": "tsx"
+        },
+        "content": "المنطق البرمجي",
+        "id": "69060f9cd348c659ddd09dcf",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": " // app/_Articles/PresentationalArticles.tsx\nimport { PresentationalArticlesProps } from '@/types/Articles';\nimport dynamic from 'next/dynamic';\nimport Link from 'next/link';\nimport React from 'react';\nimport ArticlesState from './_components/ArticlesState';\nconst ArticleImage = dynamic(() => import('./_components/ArticleImage'), {\n  ssr: false,\n  loading: () => (\n    <div className=' w-full h-[300px] rounded-2xl aspect-[16/9] bg-gray-600 animate-pulse' />\n  ),\n});\nconst PresentationalArticles: React.FC<PresentationalArticlesProps> = ({\n  isError,\n  isLoading,\n  articles,\n  hasNextPage,\n  inViewRef,\n}) => {\n  return (\n    <>\n      {isLoading && (\n        <ArticlesState>\n          <ArticlesState.loading />\n        </ArticlesState>\n      )}\n      {isError && (\n        <ArticlesState>\n          <ArticlesState.error />\n        </ArticlesState>\n      )}\n      {articles.length === 0 && !isLoading && (\n        <ArticlesState>\n          <ArticlesState.empty />\n        </ArticlesState>\n      )}\n      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-0 py-5 sm:p-5 gap-x-10 gap-y-16'>\n        {articles.map((article, i: number) => (\n          <div key={article._id} className='space-y-4'>\n            <Link href={`/article/${article.slug}`} className='block'>\n              <ArticleImage banner={article.banner} i={i} />\n            </Link>\n            <p className='flex justify-center items-center gap-5'>\n              <span className='text-secondary/75'>\n                {new Date(article.createdAt).toLocaleDateString('en-GB')}\n              </span>\n              <Link\n                href={`/tags/${article.tag}`}\n                className='capitalize truncate max-w-32 text-secondary bg-[#1e293999] hover:bg-[#1e2939] py-1 px-4 rounded-2xl transition-all'\n              >\n                {article.tag}\n              </Link>\n            </p>\n            <Link href={`/article/${article.slug}`}>\n              <h2 className='text-xl font-bold mt-2 mb-4 truncate max-w-full'>\n                {article.title}\n              </h2>\n              <p className='line-clamp-3 text-secondary max-w-full'>\n                {article.description}\n              </p>\n            </Link>\n          </div>\n        ))}\n      </section>\n      {hasNextPage && (\n        <div ref={inViewRef} className='w-full h-40'>\n          {/* {isFetchingNextPage ? (\n            <div className='flex items-center gap-2'>\n              <div className='animate-spin rounded-full h-6 w-6 border-b-2 border-primary'></div>\n              <span className='text-secondary'>جاري تحميل المزيد...</span>\n            </div>\n          ) : (\n            <div className='text-secondary'>اسحب لأسفل لتحميل المزيد</div>\n          )} */}\n        </div>\n      )}\n    </>\n  );\n};\nexport default PresentationalArticles;",
+          "language": "tsx"
+        },
+        "content": "منطق عرض نتائج محتوى الكود",
+        "id": "69060f9cd348c659ddd09dd1",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "هنا لا تخاف ما رح اتكلم كثير بس رح اشوفك كيف ان ممكن تحويل منطق برمجي على شكل hook او component منفصل امر ممتع.....",
+        "id": "69060f9cd348c659ddd09dd2",
+        "image": null,
+        "title": "Custom Hooks Pattern"
+      },
+      {
+        "code": {
+          "content": "// app/_Articles/_components/initialArticlesHook.tsx\nimport { ArticlesResponse } from '@/types/Articles';\nimport ArticlesState from './ArticlesState';\nconst initialArticlesHook = async ({ tag }: { tag?: string } = {}) => {\n  const res = await fetch(\n    !tag\n      ? `${process.env.url}/api/articles?page=1&limit=6`\n      : `${process.env.url}/api/tags/${tag}?page=1&limit=6`,\n    {\n      next: { revalidate: !tag ? 1000 * 60 * 5 : 0 },\n    }\n  );\n  if (!res.ok) {\n    <ArticlesState>\n      <ArticlesState.error />\n    </ArticlesState>;\n  }\n  const initialArticles: ArticlesResponse = await res.json();\n  if (initialArticles.articles?.length === 0) {\n    <ArticlesState>\n      <ArticlesState.empty />\n    </ArticlesState>;\n  }\n  return { initialArticles };\n};\nexport default initialArticlesHook;",
+          "language": "tsx"
+        },
+        "content": "الـhook ومنطقها البرمجي",
+        "id": "69060f9cd348c659ddd09dd3",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": " // app/page.tsx\nimport React from 'react';\nimport ArticlesState from './_Articles/_components/ArticlesState';\nimport dynamic from 'next/dynamic';\nimport initialArticlesHook from './_Articles/_components/initialArticlesHook';\nconst Articles = dynamic(() => import('./_Articles/Articles'), {\n  loading: () => (\n    <ArticlesState>\n      <ArticlesState.loading />\n    </ArticlesState>\n  ),\n});\nconst page = async () => {\n  const { initialArticles } = await initialArticlesHook();\n  return (\n    <div className='p-5 space-y-4'>\n      <h1 className='text-3xl md:text-4xl text-center font-bold'>مُركَّز</h1>\n      <p className='text-center text-xl md:text-2xl text-secondary max-w-4xl m-auto'>\n        مُركَّز منصة اجمع فيها مقالاتي التي تكون عبارة عن ملخص لمعلومة برمجية\n        بدون كثرة مقدمات او تمطيط للكلام....\n      </p>\n      <Articles initialArticles={initialArticles} />\n    </div>\n  );\n};\nexport default page;",
+          "language": "tsx"
+        },
+        "content": "الاستفادة",
+        "id": "69060f9cd348c659ddd09dd4",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "وبهذا الشكل اصبح بامكانك الاستفادة من هذا المنطق البرمجي في اي مكان في الموقع وبدون تكرار وتكون طبقت مصطلح don\"t repeat yourself في عالم البرمجة",
+        "id": "69060f9cd348c659ddd09dd5",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "اذا عندك خواص عامة مشتركة بين عدة مكونات او تريد تنفيذ شرط معين على عدة مكونات فهذا النمط يخليك تحدد هذا المنطق او الخواص من مكان محدد ثم كل عنصر جديد يمر بداخله يحصل على هذه الميزات وهو شبيه بنمط الـCustom Hooks Pattern إلى حد ما، ولكن ركز معي لأني رح اضيف شكلين لطريقة استخدامه والشكل الثاني مهم في عالم الحماية من ناحية الفرونت اند",
+        "id": "69060f9cd348c659ddd09dd6",
+        "image": null,
+        "title": "Higher-Order Components (HOCs)"
+      },
+      {
+        "code": {
+          "content": "import React from 'react';\nexport default function WithStyles(Component: React.ComponentType<any>) {\n  return (props: {[key: string]: any }) => {\n    const style = { padding: 10, margin: 10 };\n    return <Component style={style} {...props} />;\n};\n}\n // الاستخدام\nimport { ButtonHTMLAttributes } from 'react';\nimport WithStyles from './WithStyles';\nexport default function Button(props: {\n  props: ButtonHTMLAttributes<HTMLButtonElement>;\n}) {\n  return <button {...props}>Click Me!</button>;\n}\nexport const StyledButton = WithStyles(Button);",
+          "language": "tsx"
+        },
+        "content": "اولا- اعطاء خواص معينة لعدة عناصر (وهنا كما قلت يشبه موضوع الـCustom Hooks Pattern إلى حد ما)",
+        "id": "69060f9cd348c659ddd09dd7",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "'use client'\nimport { useEffect, useState } from 'react';\nimport { useRouter } from 'next/navigation';\nimport { ComponentType } from 'react';\nfunction withAuth<P>(WrappedComponent: ComponentType<P>) {\n  const ComponentWithAuth = (props: P) => {\n    const router = useRouter();\n    const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);\n    useEffect(() => {\n      const token = localStorage.getItem('token');\n      if (token) setIsAuthorized(true);\n},[router]);\n    if (isAuthorized === null) return null;\n    return <WrappedComponent {...props} />;\n};\n  return ComponentWithAuth;\n}",
+          "language": "tsx"
+        },
+        "content": "ثانيا- استخدامه في عمليات التحقق من تسجيل دخول المستخدم على سبيل المثال (Authorization/Authentication)، الفكرة انه قبل ما تعرض الـComponent يتحقق من شرط معين (مثلاً حالة تسجيل الدخول أو صلاحيات المستخدم)",
+        "id": "69060f9cd348c659ddd09dd8",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "const DeleteItem = () => <div>🗑️ حذف العنصر</div>;\nconst ProtectedDeleteItem = withAuth(DeleteItem);\nexport default function Page() {\n  return <ProtectedDeleteItem />;\n}",
+          "language": "tsx"
+        },
+        "content": "لن يتم عرض العناصر المررة إلى 'withAuth' في حال كان المستخدم لم يسجل الدخول بعد",
+        "id": "69060f9cd348c659ddd09dd9",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "const A = withLogger(Button);\nconst B = withAuth(Button);",
+          "language": "tsx"
+        },
+        "content": "اعلم انه في nextjs وما شابه يمكن منع المستخد من الوصول لبعض الصفحات عبر ملف middleware.ts ولكن تذكر انه للصفحات وليس للمكونات اما الـHOCs هذا النمط يساعدك على التحكم في امكانية الوصول للمكونات وبدون وضع شروط لكل مكون او تكرار نفس الكود (فعاليته تظهر في المشاريع الكبيرة لأنه يختصر امور كثيرة ويقلل الوقت وهذا الهدف من استخدام كل او جل الـPatterns)\n \n(<strong>تنويه:</strong> يتم في كل مرة إنشاء وإرجاع عنصر جديد أو منفصل عن الأصل، بمعنى انه بإمكانك استخدام أكثر من HOC واحد مع نفس المكوّن، لأن التأثير يُطبَّق على النسخة الناتجة من التغليف، وليس على المكوّن الأصلي نفسه)",
+        "id": "69060f9cd348c659ddd09dda",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "import React from 'react';\nimport { createPortal } from 'react-dom';\ninterface ModalProps {\n  isOpen: boolean;\n  handleClose: () => void;\n  children: React.ReactNode;\n}\nexport default function Modal({ isOpen, handleClose, children }: ModalProps) {\n  if (isOpen === false) return null;\n  return createPortal(\n    <div\n      style={{\n        position: 'fixed',\n        inset: 0,\n        background: 'aqua',\n        display: 'flex',\n        flexDirection: 'column',\n        placeItems: 'center',\n        justifyContent: 'center',\n}}\n    >\n      <div>{children}</div>\n      <div>\n        <button onClick={handleClose}>close modal</button>\n      </div>\n    </div>,\n    document.body\n  );\n}",
+          "language": "tsx"
+        },
+        "content": "هو نمط وخاصية بنفس الوقت وفكرة الـPortal Pattern هي وضع بعض العناصر خارج ترتيبها الطبيعي في الـDOM مثلا لو عندك اي شيء يعرض على الشاشة فبطبيعة الحال هو رح يكون داخل الـroot فسيتم تطبيق عليه جميع تأثيرات العنصر الاساسي اللي هو فيه (مثل الـoverflow أو z-index أو position) ولكن احيانا تريد عرض مثلا قائمة منسدلة او نافذة عائمة فتحتاج اولا انها تكون فوق جميع العناصر ثانيا انها ما تتأثر بمكان العنصر الاساسي اللي يحتويه وبنفس الوقت تحتاج ان تأخذ بيانات من هذا العنصر الاساسي كـprops، فهنا يكمن دور هذا النمط حيث يمكنك من انشاء عنصر في اي مكان في الـDOM اين ما كان موضعه الاساسي عبر خاصية createPortal من react-dom ثم تحديد المكان الذي تريد عرضه فيه مع الحفاظ على الاتصال من ناحية المنطق البرمجي مع العنصر الاساسي او كما يطلق عليه العنصر الاب (parent element)",
+        "id": "69060f9cd348c659ddd09ddb",
+        "image": null,
+        "title": "Portal Pattern"
+      },
+      {
+        "code": null,
+        "content": "الان اصبح يعرض خارج وفوق الـroot element ومع هذا ما زال يملك صلاحية الوصول للبيانات المشاركة من قبل العنصر الاب والتعديل عليها وارجاعها للاب وكأنه عنصر داخل شجرة العنصر الاب",
+        "id": "69060f9cd348c659ddd09ddc",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": " // app/_components/Button.tsx\ninterface ButtonProps {\n  variant?: 'primary' | 'secondary' | 'danger' | 'success' | 'warning';\n  shadow?: 'one' | 'two';\n  style?: React.CSSProperties;\n  children: React.ReactNode;\n}\nconst Button = ({\n  variant = 'primary',\n  shadow = 'one',\n  style,\n  children,\n}: ButtonProps) => {\n  return (\n    <button\n      style={{\n        ...styles.variants[variant],\n        ...styles.boxShadow[shadow],\n        ...style,\n      }}\n    >\n      {children}\n    </button>\n  );\n};\nconst styles = {\n  variants: {\n    primary: { backgroundColor: 'blue', color: 'white' },\n    secondary: { backgroundColor: '#fff', color: '#000' },\n    danger: { backgroundColor: '#f00', color: '#fff' },\n    warning: { backgroundColor: 'yellow', color: '#000' },\n    success: { backgroundColor: 'green', color: '#fff' },\n  },\n  boxShadow: {\n    one: { boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' },\n  },\n};\nexport default Button;",
+          "language": "tsx"
+        },
+        "content": "احيانا يكون عندك عنصر محدد ومستخدم في عدة امكان في الموقع ولكن له انماط متعددة او تريد انشاء ثييم موحد في الموقع فنمط Variant Props Pattern يتيح لك هذا الامر من خلال اعداد تنسيقات مسبقة ويمكن اختيار تنسيق محدد في كل مرة يتم استدعاء هذا العنصر \n\nوالميزة في هذا الامر غير انها تساعدك على مشاركة عدة خواص للعنصر او توحيد ثييم الموقع ايضا يسهل التعديل بدل ما تعدل 12 عنصر في 10 ملفات ممكن تعدل كل هذه العناصر من ملف واحد وان تعددت تنسيقاتها",
+        "id": "69060f9cd348c659ddd09ddd",
+        "image": null,
+        "title": "Variant Props Pattern"
+      },
+      {
+        "code": {
+          "content": "<Button shadow='two' variant='secondary'>انقر هنا</Button>\n<Button variant='danger' style={{ padding: '10px' }}>حذف</Button>\n<Button variant={dark ? 'danger': 'primary'}>حذف</Button>",
+          "language": "tsx"
+        },
+        "content": "النتيجة",
+        "id": "69060f9cd348c659ddd09dde",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "1- [Shadow Coding بالعربي](https://youtu.be/B09-J84p0ck?si=e53Ju2MEiPt6PUwV)\n2- [github.com/Mostafashadow1](https://github.com/Mostafashadow1/Mastering-React-Design-Patterns/tree/master/src/react-desgin-patterns)\n3- [انا 🙃](https://yazn-108.github.io/)",
+        "id": "69060f9cd348c659ddd09ddf",
+        "image": null,
+        "title": "المصادر"
+      }
+    ],
+    "createdAt": "2025-11-01T00: 00: 00.000Z",
+    "description": "طرق أو أساليب احترافية لتنظيم وكتابة الكود في React/Nextjs، بحيث يكون الكود نظيف، قابل لإعادة الاستخدام، وسهل الصيانة مع نمو المشروع.",
+    "slug": "react-design-patterns",
+    "tag": "react-nextjs",
+    "title": "ماهو React Design Patterns?"
   }
 ]

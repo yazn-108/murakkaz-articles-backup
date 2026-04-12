@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: yazn-108/test-repo-for-github-actions
+          repository: yazn-108/murakkaz-articles-backup
           token: ${{ secrets.BACKUP_REPO_TOKEN }}
           path: backup
 

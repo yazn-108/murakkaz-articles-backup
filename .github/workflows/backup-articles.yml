@@ -7,27 +7,28 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          repository: yazn-108/murakkaz-articles-backup
-          token: ${{ secrets.BACKUP_REPO_TOKEN }}
-          path: backup
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: node backup/scripts/backup-events-handler.js
+      - run: node scripts/backup-events-handler.js
         env:
           EVENT_TYPE: ${{ github.event.action }}
           PAYLOAD: ${{ toJson(github.event.client_payload) }}
 
       - run: |
-          cd backup
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.email "github-actions@github.com"
           git add articles.json
-          git commit -m "${{ github.event.action }}" || echo "no changes"
-          git push
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "${{ github.event.action }}"
+            git push
+          fi
+

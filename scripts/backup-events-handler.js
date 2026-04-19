@@ -1,5 +1,5 @@
 const fs = require("fs")
-const filePath = "backup/articles.json"
+const filePath = "/articles.json"
 const eventType = process.env.EVENT_TYPE
 const payload = JSON.parse(process.env.PAYLOAD || "{}")
 let articles = []

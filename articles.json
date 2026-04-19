@@ -1,17 +1,5 @@
 [
   {
-    "SubscribersNotified": false,
-    "_id": "333",
-    "banner": {
-      "alt": ""
-    },
-    "createdAt": "2026-04-19T00:00:00.000Z",
-    "description": "",
-    "slug": "",
-    "tag": "",
-    "title": ""
-  },
-  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {

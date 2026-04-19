@@ -1,5 +1,17 @@
 [
   {
+    "SubscribersNotified": false,
+    "_id": "123",
+    "banner": {
+      "alt": ""
+    },
+    "createdAt": "2026-04-19T00:00:00.000Z",
+    "description": "",
+    "slug": "",
+    "tag": "",
+    "title": ""
+  },
+  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {
@@ -45,171 +57,6 @@
     "slug": "activity-component-react",
     "tag": "react-nextjs",
     "title": "ماهو <Activity /> في عالم react؟"
-  },
-  {
-    "SubscribersNotified": true,
-    "_id": "69d662ca2bb54b5c28fd5d2b",
-    "banner": {
-      "alt": "tailwind-hover-variables-image",
-      "public_id": "r3cnbpnsx25hrgxkgopk",
-      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757610169/r3cnbpnsx25hrgxkgopk.png"
-    },
-    "blocks": [
-      {
-        "code": null,
-        "content": "كما ذكرت من ضمن هذه التغييرات هي ازالة تأثير الـhover من الشاشات الصغيرة او المعتمدة على اللمس وسبب الازالة يعود لوجهة نظر القائمين على الـframework ان هذا التأثير يسبب تجربة سيئة للمستخدمين بسبب ان الـhover في الهواتف يبقى موجود حتى تضغط في مكان آخر رغم ان وجهة النظر هذه قد لا تكون صحيحة 100% لأن تأثير الـhover ليس متوقف على تغيير لون او ما شابه وانما يستخدم في تأثيرات متنوعة مثل عرض بعض القوائم بشكل بسيط دون الحاجة لاستخدام javascript مثلا.",
-        "id": "68fba8161179ed83cf797ad9",
-        "image": null,
-        "title": "مستجدات الـhover"
-      },
-      {
-        "code": {
-          "content": "@custom-variant hover (&:hover);",
-          "language": "css"
-        },
-        "content": "ولحل هذا الامر يتم اضافة هذا الجزء في ملف الـinput.css/globals.css",
-        "id": "68fba8161179ed83cf797ada",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": null,
-        "content": "تم اضافة @theme المسؤولة عن ادارة المتغيرات بعد ما تم الاستغناء عن ملف tailwind.config.js ولكن المختلف فيها انها تقوم بتخزين قيمة المتغيرات عند عملية الـbuild مما يمنعك من تغيير قيمة المتغيرات فيما بعد من خلال ملف الـcss \n(مثلا لو حاولت تعمل dark mode أو تغييرات ديناميكية، ما رح تنعكس).",
-        "id": "68fba8161179ed83cf797adb",
-        "image": null,
-        "title": "تغييرات الـvariables"
-      },
-      {
-        "code": {
-          "content": ":root {\n  --primary-color: white;\n}\n.dark {\n  --primary-color: black;\n}\n@theme inline {\n  --color-primary: var(--primary-color);\n}",
-          "language": "css"
-        },
-        "content": "لحل هذا الامر يتم الاستعانة بقيمة inline التي تقوم بربط قيم @theme مع متغيرات CSS Variables بشكل مباشر، وبالتالي تقدر تغير القيم ديناميكيًا حتى بعد الـbuild.",
-        "id": "68fba8161179ed83cf797adc",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": null,
-        "content": "معرض اعمالي  ([https: //yazn-108.github.io](https://yazn-108.github.io)) في اخر تحديث له قائم على هذا الامر من ناحية الـhover والـdark-mode",
-        "id": "68fba8161179ed83cf797add",
-        "image": null,
-        "title": "تجربة نتيجة الحلول المذكورة"
-      }
-    ],
-    "createdAt": "2025-09-11T00:00:00.000Z",
-    "description": "بعد اخر تحديث في tailwind 4.1.0v تم القيام بعدة تغييرات ومن ضمن هذه التغييرات هي ازالة تأثير الـhover من الشاشات الصغيرة او المعتمدة على اللمس وايضا تم تغيير الية ادارة المتغيرات",
-    "slug": "tailwind-hover-variables",
-    "tag": "tailwind",
-    "title": "الـhover والـvariables في tailwind بعد اخر تحديث"
-  },
-  {
-    "SubscribersNotified": true,
-    "_id": "69d661fe2bb54b5c28fd5d29",
-    "banner": {
-      "alt": "destructuring code image",
-      "public_id": "gjeer0ixjm5sr6q9y2wc",
-      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757430045/gjeer0ixjm5sr6q9y2wc.png"
-    },
-    "blocks": [
-      {
-        "code": null,
-        "content": "الـDestructuring في JavaScript فكرته بسيطة جدًا: يخليك تختصر وتوضح الكود بدل ما تكتب أسطر طويلة عشان توصل لقيمة من Array أو Object، يعني بدل ما تعيد وتكرر .name و .age كل شوي، تقدر تستخرج القيم مرة واحدة وتحطها في متغيرات.\n\nالميزة الحلوة إنه مو بس يختصر الكود، كمان يخليك تتعامل مع بيانات متداخلة بسهولة، وتقدر تحط قيم افتراضية لها إذا ما تم العثور على بعض القيم لسبب ما، وهذا مهم خصوصًا لو البيانات جاية من API أو مصدر خارجي، عشان ما يحصل أخطاء غير متوقعة.\n\nبالمختصر: الكود يصير أنظف، أسهل، وآمن.",
-        "id": "68c07dcf1c7c50bd1de8b263",
-        "image": null,
-        "title": "ما الهدف من استخدامها؟"
-      },
-      {
-        "code": null,
-        "content": "من ناحية تأثيره على الاداء فلا يوجد اي تأثير بين",
-        "id": "68c07dcf1c7c50bd1de8b264",
-        "image": null,
-        "title": "تأثير Destructuring على الأداء"
-      },
-      {
-        "code": {
-          "content": "const numbers = [1, 2, 3];\nconst first = numbers[0];\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst name = person.name;",
-          "language": "javascript"
-        },
-        "content": "الطريقة المعتادة:",
-        "id": "68c07dcf1c7c50bd1de8b265",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": {
-          "content": "const [a, b, c] = [1, 2, 3];\nconsole.log(a); // 1\nconsole.log(b); // 2\nconsole.log(c); // 3\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst { name = 'الاسم الافتراضي', age } = person;\nconsole.log(name); // Yazan\nconsole.log(age);  // 22",
-          "language": "javascript"
-        },
-        "content": "وطريقة الـDestructuring:",
-        "id": "68c07dcf1c7c50bd1de8b266",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": null,
-        "content": "إلا في حالات محدودة جدًا يكون التأثير شبه معدوم، ويحصل هذا عند استخدام الـDestructuring بكثرة داخل نفس الـscope، وهذا يرجع لعملية التفكيك (destructuring) التي تتطلب معالجة إضافية من قبل محرك JavaScript في الخلفية. ومع هذا، مثل ماذكرت، هذا التأثير نادراً ما يكون ملحوظ ولا يؤثر على الأداء العملي للتطبيقات العادية، ولكن من باب الإشارة إلى أن هناك تكلفة صغيرة جدًا على المستوى الداخلي لمحرك اللغة عند الاستخدام المكثف للغاية. (وتقدر تعتبر هذه الجزئية غير موجودة 🙃)",
-        "id": "68c07dcf1c7c50bd1de8b267",
-        "image": null,
-        "title": null
-      }
-    ],
-    "createdAt": "2024-03-06T00:00:00.000Z",
-    "description": "الـDestructuring هو طريقة لاستخراج البيانات من الـArrays أو الـObjects على شكل متغيرات جديدة بطريقة مختصرة وسهلة، بدلًا من الكتابة التقليدية.",
-    "slug": "destructuring-in-javascript",
-    "tag": "JavaScript",
-    "title": "الـDestructuring في JavaScript"
-  },
-  {
-    "SubscribersNotified": true,
-    "_id": "69d6609f2bb54b5c28fd5d27",
-    "banner": {
-      "alt": "open graph image",
-      "public_id": "v3eenjpmqzuuekiw0qj1",
-      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757258679/v3eenjpmqzuuekiw0qj1.png"
-    },
-    "blocks": [
-      {
-        "code": null,
-        "content": "تستخدم لعرض بيانات عن محتويات الرابط عند مشاركته كما في الصورة وهذا الامر يرفع نسبة الثقة عند المستخدمين ويظهر موقعك بشكل احترافي.",
-        "id": "68fba97b1179ed83cf797af2",
-        "image": {
-          "alt": "yazn open graph in linkedin",
-          "public_id": "eifmakyi9cmim2pbhtra",
-          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757259363/eifmakyi9cmim2pbhtra.png"
-        },
-        "title": "ماهي نتيجة استخدام meta tags؟"
-      },
-      {
-        "code": {
-          "content": "<!-- HTML Meta Tags -->\n<title>Front End Web Developer</title>\n<meta name='description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n\n<!-- Facebook Meta Tags -->\n<meta property='og:url' content='https: //yazn-108.github.io/'>\n<meta property='og:type' content='website'>\n<meta property='og:title' content='Front End Web Developer'>\n<meta property='og:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta property='og:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Twitter Meta Tags -->\n<meta name='twitter:card' content='summary_large_image'>\n<meta property='twitter:domain' content='yazn-108.github.io'>\n<meta property='twitter:url' content='https://yazn-108.github.io/'>\n<meta name='twitter:title' content='Front End Web Developer'>\n<meta name='twitter:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta name='twitter:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Meta Tags Generated via https: //www.opengraph.xyz -->",
-          "language": "html"
-        },
-        "content": "الـOpen Graph هو بروتوكول (Open Graph Protocol) أنشأته شركة فيسبوك سنة 2010، والغرض منه هو جعل أي رابط على الانترنت يتم مشاركة مع بعض التفاصيل عن محتويات الرابط يتم تحديدها من قبل صاحب الصفحة التابع لها الرابط.",
-        "id": "68fba97b1179ed83cf797af3",
-        "image": null,
-        "title": "ماهو open graph؟"
-      },
-      {
-        "code": null,
-        "content": "من خلال الدخول إلى موقع [www.opengraph.xyz](https://www.opengraph.xyz) تقوم بادخل رابط موقعك وهو يعطيك الاكواد الاساسية مع اضافة البيانات التي استطاع التعرف عليها ولكن هذا لا يمنع من انك تحتاج للتعديل عليها بشكل يدوي.",
-        "id": "68fba97b1179ed83cf797af4",
-        "image": null,
-        "title": "كيف يمكن توليدها بشكل تلقائي؟"
-      },
-      {
-        "code": null,
-        "content": "فعليا الـOpen Graph ليس له تدخل فعلي في ارشفة موقعك في نتائج بحث Google على سبيل المثال ولكن كثرة النقر على رابط موقعك بسبب شكلة الاحترافي يساهم في زيادة موثوقيته عند محركات بحث Google وهنا يأتي دور الـMeta Tags التي سوف اتكلم عنها بشكل بسيط لأن سيتم الحديث عنها في مقالة منفصلة إن شاء الله؛ الـMeta Tags تساعد محركات البحث (مثل Google و Bing) على فهم محتوى موقعك وبالتالي تعطيه ترتيب في نتائج البحث عندما يقوم احد المستخدمين بالبحث عن شيء موقعك له ارتباط فيه.",
-        "id": "68fba97b1179ed83cf797af5",
-        "image": null,
-        "title": "ما دور Meta Tags وOpen Graph في تحسين ظهور صفحات الويب على محركات البحث ومنصات التواصل الاجتماعي؟"
-      }
-    ],
-    "createdAt": "2024-05-14T00:00:00.000Z",
-    "description": "الـOpen Graph هي مجموعة وسوم خاصة بالشبكات الاجتماعية (Facebook, LinkedIn, Twitter...). وظيفتها تحديد كيف يظهر رابط موقعك عند مشاركته (العنوان، الوصف، الصورة).",
-    "slug": "open-graph",
-    "tag": "SEO",
-    "title": "اظهار بيانات محددة عند مشاركة رابط الموقع"
   },
   {
     "SubscribersNotified": true,
@@ -559,5 +406,170 @@
     "slug": "safe-array-methods",
     "tag": "JavaScript",
     "title": "حماية الـarray في JavaScript"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d662ca2bb54b5c28fd5d2b",
+    "banner": {
+      "alt": "tailwind-hover-variables-image",
+      "public_id": "r3cnbpnsx25hrgxkgopk",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757610169/r3cnbpnsx25hrgxkgopk.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "كما ذكرت من ضمن هذه التغييرات هي ازالة تأثير الـhover من الشاشات الصغيرة او المعتمدة على اللمس وسبب الازالة يعود لوجهة نظر القائمين على الـframework ان هذا التأثير يسبب تجربة سيئة للمستخدمين بسبب ان الـhover في الهواتف يبقى موجود حتى تضغط في مكان آخر رغم ان وجهة النظر هذه قد لا تكون صحيحة 100% لأن تأثير الـhover ليس متوقف على تغيير لون او ما شابه وانما يستخدم في تأثيرات متنوعة مثل عرض بعض القوائم بشكل بسيط دون الحاجة لاستخدام javascript مثلا.",
+        "id": "68fba8161179ed83cf797ad9",
+        "image": null,
+        "title": "مستجدات الـhover"
+      },
+      {
+        "code": {
+          "content": "@custom-variant hover (&:hover);",
+          "language": "css"
+        },
+        "content": "ولحل هذا الامر يتم اضافة هذا الجزء في ملف الـinput.css/globals.css",
+        "id": "68fba8161179ed83cf797ada",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "تم اضافة @theme المسؤولة عن ادارة المتغيرات بعد ما تم الاستغناء عن ملف tailwind.config.js ولكن المختلف فيها انها تقوم بتخزين قيمة المتغيرات عند عملية الـbuild مما يمنعك من تغيير قيمة المتغيرات فيما بعد من خلال ملف الـcss \n(مثلا لو حاولت تعمل dark mode أو تغييرات ديناميكية، ما رح تنعكس).",
+        "id": "68fba8161179ed83cf797adb",
+        "image": null,
+        "title": "تغييرات الـvariables"
+      },
+      {
+        "code": {
+          "content": ":root {\n  --primary-color: white;\n}\n.dark {\n  --primary-color: black;\n}\n@theme inline {\n  --color-primary: var(--primary-color);\n}",
+          "language": "css"
+        },
+        "content": "لحل هذا الامر يتم الاستعانة بقيمة inline التي تقوم بربط قيم @theme مع متغيرات CSS Variables بشكل مباشر، وبالتالي تقدر تغير القيم ديناميكيًا حتى بعد الـbuild.",
+        "id": "68fba8161179ed83cf797adc",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "معرض اعمالي  ([https: //yazn-108.github.io](https://yazn-108.github.io)) في اخر تحديث له قائم على هذا الامر من ناحية الـhover والـdark-mode",
+        "id": "68fba8161179ed83cf797add",
+        "image": null,
+        "title": "تجربة نتيجة الحلول المذكورة"
+      }
+    ],
+    "createdAt": "2025-09-11T00:00:00.000Z",
+    "description": "بعد اخر تحديث في tailwind 4.1.0v تم القيام بعدة تغييرات ومن ضمن هذه التغييرات هي ازالة تأثير الـhover من الشاشات الصغيرة او المعتمدة على اللمس وايضا تم تغيير الية ادارة المتغيرات",
+    "slug": "tailwind-hover-variables",
+    "tag": "tailwind",
+    "title": "الـhover والـvariables في tailwind بعد اخر تحديث"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d6609f2bb54b5c28fd5d27",
+    "banner": {
+      "alt": "open graph image",
+      "public_id": "v3eenjpmqzuuekiw0qj1",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757258679/v3eenjpmqzuuekiw0qj1.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "تستخدم لعرض بيانات عن محتويات الرابط عند مشاركته كما في الصورة وهذا الامر يرفع نسبة الثقة عند المستخدمين ويظهر موقعك بشكل احترافي.",
+        "id": "68fba97b1179ed83cf797af2",
+        "image": {
+          "alt": "yazn open graph in linkedin",
+          "public_id": "eifmakyi9cmim2pbhtra",
+          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757259363/eifmakyi9cmim2pbhtra.png"
+        },
+        "title": "ماهي نتيجة استخدام meta tags؟"
+      },
+      {
+        "code": {
+          "content": "<!-- HTML Meta Tags -->\n<title>Front End Web Developer</title>\n<meta name='description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n\n<!-- Facebook Meta Tags -->\n<meta property='og:url' content='https: //yazn-108.github.io/'>\n<meta property='og:type' content='website'>\n<meta property='og:title' content='Front End Web Developer'>\n<meta property='og:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta property='og:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Twitter Meta Tags -->\n<meta name='twitter:card' content='summary_large_image'>\n<meta property='twitter:domain' content='yazn-108.github.io'>\n<meta property='twitter:url' content='https://yazn-108.github.io/'>\n<meta name='twitter:title' content='Front End Web Developer'>\n<meta name='twitter:description' content='I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis'>\n<meta name='twitter:image' content='https://raw.githubusercontent.com/yazn-108/yazn-108.github.io/main/imgs/open-graph-image.png'>\n\n<!-- Meta Tags Generated via https: //www.opengraph.xyz -->",
+          "language": "html"
+        },
+        "content": "الـOpen Graph هو بروتوكول (Open Graph Protocol) أنشأته شركة فيسبوك سنة 2010، والغرض منه هو جعل أي رابط على الانترنت يتم مشاركة مع بعض التفاصيل عن محتويات الرابط يتم تحديدها من قبل صاحب الصفحة التابع لها الرابط.",
+        "id": "68fba97b1179ed83cf797af3",
+        "image": null,
+        "title": "ماهو open graph؟"
+      },
+      {
+        "code": null,
+        "content": "من خلال الدخول إلى موقع [www.opengraph.xyz](https://www.opengraph.xyz) تقوم بادخل رابط موقعك وهو يعطيك الاكواد الاساسية مع اضافة البيانات التي استطاع التعرف عليها ولكن هذا لا يمنع من انك تحتاج للتعديل عليها بشكل يدوي.",
+        "id": "68fba97b1179ed83cf797af4",
+        "image": null,
+        "title": "كيف يمكن توليدها بشكل تلقائي؟"
+      },
+      {
+        "code": null,
+        "content": "فعليا الـOpen Graph ليس له تدخل فعلي في ارشفة موقعك في نتائج بحث Google على سبيل المثال ولكن كثرة النقر على رابط موقعك بسبب شكلة الاحترافي يساهم في زيادة موثوقيته عند محركات بحث Google وهنا يأتي دور الـMeta Tags التي سوف اتكلم عنها بشكل بسيط لأن سيتم الحديث عنها في مقالة منفصلة إن شاء الله؛ الـMeta Tags تساعد محركات البحث (مثل Google و Bing) على فهم محتوى موقعك وبالتالي تعطيه ترتيب في نتائج البحث عندما يقوم احد المستخدمين بالبحث عن شيء موقعك له ارتباط فيه.",
+        "id": "68fba97b1179ed83cf797af5",
+        "image": null,
+        "title": "ما دور Meta Tags وOpen Graph في تحسين ظهور صفحات الويب على محركات البحث ومنصات التواصل الاجتماعي؟"
+      }
+    ],
+    "createdAt": "2024-05-14T00:00:00.000Z",
+    "description": "الـOpen Graph هي مجموعة وسوم خاصة بالشبكات الاجتماعية (Facebook, LinkedIn, Twitter...). وظيفتها تحديد كيف يظهر رابط موقعك عند مشاركته (العنوان، الوصف، الصورة).",
+    "slug": "open-graph",
+    "tag": "SEO",
+    "title": "اظهار بيانات محددة عند مشاركة رابط الموقع"
+  },
+  {
+    "SubscribersNotified": true,
+    "_id": "69d661fe2bb54b5c28fd5d29",
+    "banner": {
+      "alt": "destructuring code image",
+      "public_id": "gjeer0ixjm5sr6q9y2wc",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1757430045/gjeer0ixjm5sr6q9y2wc.png"
+    },
+    "blocks": [
+      {
+        "code": null,
+        "content": "الـDestructuring في JavaScript فكرته بسيطة جدًا: يخليك تختصر وتوضح الكود بدل ما تكتب أسطر طويلة عشان توصل لقيمة من Array أو Object، يعني بدل ما تعيد وتكرر .name و .age كل شوي، تقدر تستخرج القيم مرة واحدة وتحطها في متغيرات.\n\nالميزة الحلوة إنه مو بس يختصر الكود، كمان يخليك تتعامل مع بيانات متداخلة بسهولة، وتقدر تحط قيم افتراضية لها إذا ما تم العثور على بعض القيم لسبب ما، وهذا مهم خصوصًا لو البيانات جاية من API أو مصدر خارجي، عشان ما يحصل أخطاء غير متوقعة.\n\nبالمختصر: الكود يصير أنظف، أسهل، وآمن.",
+        "id": "68c07dcf1c7c50bd1de8b263",
+        "image": null,
+        "title": "ما الهدف من استخدامها؟"
+      },
+      {
+        "code": null,
+        "content": "من ناحية تأثيره على الاداء فلا يوجد اي تأثير بين",
+        "id": "68c07dcf1c7c50bd1de8b264",
+        "image": null,
+        "title": "تأثير Destructuring على الأداء"
+      },
+      {
+        "code": {
+          "content": "const numbers = [1, 2, 3];\nconst first = numbers[0];\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst name = person.name;",
+          "language": "javascript"
+        },
+        "content": "الطريقة المعتادة:",
+        "id": "68c07dcf1c7c50bd1de8b265",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "const [a, b, c] = [1, 2, 3];\nconsole.log(a); // 1\nconsole.log(b); // 2\nconsole.log(c); // 3\n\nconst person = {\n  name: 'yazn',\n  age: 20\n};\nconst { name = 'الاسم الافتراضي', age } = person;\nconsole.log(name); // Yazan\nconsole.log(age);  // 22",
+          "language": "javascript"
+        },
+        "content": "وطريقة الـDestructuring:",
+        "id": "68c07dcf1c7c50bd1de8b266",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "إلا في حالات محدودة جدًا يكون التأثير شبه معدوم، ويحصل هذا عند استخدام الـDestructuring بكثرة داخل نفس الـscope، وهذا يرجع لعملية التفكيك (destructuring) التي تتطلب معالجة إضافية من قبل محرك JavaScript في الخلفية. ومع هذا، مثل ماذكرت، هذا التأثير نادراً ما يكون ملحوظ ولا يؤثر على الأداء العملي للتطبيقات العادية، ولكن من باب الإشارة إلى أن هناك تكلفة صغيرة جدًا على المستوى الداخلي لمحرك اللغة عند الاستخدام المكثف للغاية. (وتقدر تعتبر هذه الجزئية غير موجودة 🙃)",
+        "id": "68c07dcf1c7c50bd1de8b267",
+        "image": null,
+        "title": null
+      }
+    ],
+    "createdAt": "2024-03-06T00:00:00.000Z",
+    "description": "الـDestructuring هو طريقة لاستخراج البيانات من الـArrays أو الـObjects على شكل متغيرات جديدة بطريقة مختصرة وسهلة، بدلًا من الكتابة التقليدية.",
+    "slug": "destructuring-in-javascript",
+    "tag": "JavaScript",
+    "title": "الـDestructuring في JavaScript"
   }
 ]

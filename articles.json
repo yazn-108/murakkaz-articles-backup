@@ -1,5 +1,19 @@
 [
   {
+    "SubscribersNotified": false,
+    "_id": "69f32096eeb359bddc4a722b",
+    "banner": {
+      "alt": "image alt",
+      "public_id": "xsx7qvxwhwtetkb4o1gw",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541269/xsx7qvxwhwtetkb4o1gw.jpg"
+    },
+    "createdAt": "2026-04-30T00:00:00.000Z",
+    "description": "description",
+    "slug": "test-slug",
+    "tag": "test",
+    "title": "test article"
+  },
+  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {

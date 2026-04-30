@@ -1,43 +1,6 @@
 [
   {
     "SubscribersNotified": true,
-    "_id": "69f32096eeb359bddc4a722b",
-    "banner": {
-      "alt": "image alt",
-      "public_id": "xsx7qvxwhwtetkb4o1gw",
-      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541269/xsx7qvxwhwtetkb4o1gw.jpg"
-    },
-    "blocks": [
-      {
-        "code": {
-          "content": "import type { MetadataRoute } from 'next'\nexport default function sitemap(): MetadataRoute.Sitemap {\n  return [\n    {\n      url: 'https://murakkaz.vercel.app/',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'daily',\n      priority: 1,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/about-yazn-108',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'monthly',\n      priority: 0.7,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/privacy-policy',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'yearly',\n      priority: 0.5,\n    },\n  ]\n}",
-          "language": "ts"
-        },
-        "content": "[text](https://github.com/)",
-        "id": "7d3cc9c2-9819-45ee-a144-d17f1985893e",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": null,
-        "content": null,
-        "id": "f608249e-8158-455e-b258-39d951683553",
-        "image": {
-          "alt": "test",
-          "public_id": "lo2rwz8pdqeamlkk8zvb",
-          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541802/lo2rwz8pdqeamlkk8zvb.jpg"
-        },
-        "title": null
-      }
-    ],
-    "createdAt": "2026-04-30T00:00:00.000Z",
-    "description": "description",
-    "slug": "test-slug",
-    "tag": "test",
-    "title": "test article"
-  },
-  {
-    "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {
       "alt": "activity-component-react",

@@ -7,6 +7,29 @@
       "public_id": "xsx7qvxwhwtetkb4o1gw",
       "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541269/xsx7qvxwhwtetkb4o1gw.jpg"
     },
+    "blocks": [
+      {
+        "code": null,
+        "content": null,
+        "id": "03feec9c-055a-4c49-8624-499f447470b1",
+        "image": {
+          "alt": "image description",
+          "public_id": "rsaoq2tp6og9vmarnlpl",
+          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541390/rsaoq2tp6og9vmarnlpl.jpg"
+        },
+        "title": null
+      },
+      {
+        "code": {
+          "content": "import type { MetadataRoute } from 'next'\nexport default function sitemap(): MetadataRoute.Sitemap {\n  return [\n    {\n      url: 'https://murakkaz.vercel.app/',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'daily',\n      priority: 1,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/about-yazn-108',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'monthly',\n      priority: 0.7,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/privacy-policy',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'yearly',\n      priority: 0.5,\n    },\n  ]\n}",
+          "language": "ts"
+        },
+        "content": null,
+        "id": "7d3cc9c2-9819-45ee-a144-d17f1985893e",
+        "image": null,
+        "title": null
+      }
+    ],
     "createdAt": "2026-04-30T00:00:00.000Z",
     "description": "description",
     "slug": "test-slug",

@@ -24,7 +24,7 @@
           "content": "import type { MetadataRoute } from 'next'\nexport default function sitemap(): MetadataRoute.Sitemap {\n  return [\n    {\n      url: 'https://murakkaz.vercel.app/',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'daily',\n      priority: 1,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/about-yazn-108',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'monthly',\n      priority: 0.7,\n    },\n    {\n      url: 'https://murakkaz.vercel.app/privacy-policy',\n      lastModified: new Date('2025-01-01'),\n      changeFrequency: 'yearly',\n      priority: 0.5,\n    },\n  ]\n}",
           "language": "ts"
         },
-        "content": " (text)[https://github.com/]",
+        "content": "[https://github.com/](text)",
         "id": "7d3cc9c2-9819-45ee-a144-d17f1985893e",
         "image": null,
         "title": null

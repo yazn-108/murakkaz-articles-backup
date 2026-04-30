@@ -17,17 +17,6 @@
         "id": "7d3cc9c2-9819-45ee-a144-d17f1985893e",
         "image": null,
         "title": null
-      },
-      {
-        "code": null,
-        "content": null,
-        "id": "03feec9c-055a-4c49-8624-499f447470b1",
-        "image": {
-          "alt": "image description",
-          "public_id": "rsaoq2tp6og9vmarnlpl",
-          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541390/rsaoq2tp6og9vmarnlpl.jpg"
-        },
-        "title": null
       }
     ],
     "createdAt": "2026-04-30T00:00:00.000Z",

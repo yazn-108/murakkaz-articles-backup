@@ -1,6 +1,6 @@
 [
   {
-    "SubscribersNotified": false,
+    "SubscribersNotified": true,
     "_id": "69f32096eeb359bddc4a722b",
     "banner": {
       "alt": "image alt",
@@ -16,6 +16,17 @@
         "content": "[text](https://github.com/)",
         "id": "7d3cc9c2-9819-45ee-a144-d17f1985893e",
         "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": null,
+        "id": "f608249e-8158-455e-b258-39d951683553",
+        "image": {
+          "alt": "test",
+          "public_id": "lo2rwz8pdqeamlkk8zvb",
+          "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777541802/lo2rwz8pdqeamlkk8zvb.jpg"
+        },
         "title": null
       }
     ],

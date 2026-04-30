@@ -1,28 +1,5 @@
 [
   {
-    "SubscribersNotified": false,
-    "_id": "69f323e2eeb359bddc4a722c",
-    "banner": {
-      "alt": "test",
-      "public_id": "aaeia9tp0yz20x9jsof4",
-      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1777542113/aaeia9tp0yz20x9jsof4.jpg"
-    },
-    "blocks": [
-      {
-        "code": null,
-        "content": null,
-        "id": "b22e217e-573e-4c0a-8034-d268721621a1",
-        "image": null,
-        "title": "test"
-      }
-    ],
-    "createdAt": "2026-04-30T00:00:00.000Z",
-    "description": "testtesttesttesttesttesttesttesttest",
-    "slug": "test",
-    "tag": "test",
-    "title": "test 5441"
-  },
-  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {

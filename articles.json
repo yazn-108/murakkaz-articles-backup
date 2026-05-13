@@ -7,7 +7,15 @@
       "public_id": "lh4vfegbqqtgsc9t6qxv",
       "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1778688311/lh4vfegbqqtgsc9t6qxv.webp"
     },
-    "blocks": [],
+    "blocks": [
+      {
+        "code": null,
+        "content": "[Harry Roberts](https://csswizardry.com/2026/05/better-browser-caching-with-no-vary-search/)",
+        "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",
+        "image": null,
+        "title": "المصادر"
+      }
+    ],
     "createdAt": "2026-05-13T00:00:00.000Z",
     "description": "ماهو No-Vary-Search وتأثيره على Browser caching",
     "slug": "no-vary-search",

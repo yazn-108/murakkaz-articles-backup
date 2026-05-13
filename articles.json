@@ -10,6 +10,13 @@
     "blocks": [
       {
         "code": null,
+        "content": "الميزة قد تأخذ قيمة او كلام اكبر من حجمها بينما هي مجرد ميزة تسمحلك بتجاهل كثرة الركويستات عند تغير querys التتبع يعني فعليا هي غير مفيدة او غير مهمة بالنسبة لك كمطور تعمل على مشاريع صغيرة او متوسطة إلى حدما وانما تظهر اهميتها بالمشاريع الضخمة فعليا لأن يكون عندك موضوع الزيارات كبير ويشكل ضغط على السيرفرات عندك فانت رح يهمك تقلل حتى الجزء من الثانية وهنا يظهر دورها وشرحنا رح يكون مبني على هذا الجانب انك شغال على مشروع ضخم.",
+        "id": "0fcb99f2-0656-41ec-8c33-3dff17efbff0",
+        "image": null,
+        "title": "اكبر من حجمها"
+      },
+      {
+        "code": null,
         "content": "[Harry Roberts](https://csswizardry.com/2026/05/better-browser-caching-with-no-vary-search/)\n[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/No-Vary-Search)",
         "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",
         "image": null,

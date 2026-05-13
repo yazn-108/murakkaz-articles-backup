@@ -22,9 +22,15 @@ if (eventType === "article.created") {
   );
 }
 if (eventType === "article.updated") {
-  articles = articles.map(a =>
-    a._id === payload._id ? payload : a
-  )
+  const index = articles.findIndex(a => a._id === payload._id);
+  if (index !== -1) {
+    articles[index] = payload;
+  } else {
+    articles.push(payload);
+  }
+  articles.sort((a, b) =>
+    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
 }
 if (eventType === "article.deleted") {
   articles = articles.filter(a => a._id !== payload.articleId)

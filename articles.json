@@ -1,5 +1,20 @@
 [
   {
+    "SubscribersNotified": false,
+    "_id": "6a04a138e24ede0f1c992fd9",
+    "banner": {
+      "alt": "مفهوم No-Vary-Search في Browser caching",
+      "public_id": "lh4vfegbqqtgsc9t6qxv",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1778688311/lh4vfegbqqtgsc9t6qxv.webp"
+    },
+    "blocks": [],
+    "createdAt": "2026-05-13T00:00:00.000Z",
+    "description": "ماهو No-Vary-Search وتأثيره على Browser caching",
+    "slug": "no-vary-search",
+    "tag": "Browser-caching",
+    "title": "ماهو No-Vary-Search في عالم الـcaching؟"
+  },
+  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {

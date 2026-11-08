@@ -10,6 +10,20 @@
     "blocks": [
       {
         "code": null,
+        "content": null,
+        "id": "272a9c96-d9fe-4271-a67c-d883793a2ab0",
+        "image": null,
+        "title": "فكرة خاصية no-vary-search"
+      },
+      {
+        "code": null,
+        "content": null,
+        "id": "ea8e6199-bee7-4572-9673-8a4a6beef40b",
+        "image": null,
+        "title": "اهمية no-vary-search وتأثيرها على سرعة السيرفر"
+      },
+      {
+        "code": null,
         "content": "[Harry Roberts](https://csswizardry.com/2026/05/better-browser-caching-with-no-vary-search/)\n[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/No-Vary-Search)",
         "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",
         "image": null,

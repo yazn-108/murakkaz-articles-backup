@@ -217,7 +217,7 @@
       },
       {
         "code": null,
-        "content": "- [MDN – HTTP QUERY Method Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)\n- [RFC 10008 – The HTTP QUERY Method Specification](https://www.rfc-editor.org/rfc/rfc10008.html)\n- [NashTech – HTTP QUERY: Bridging GET and POST](https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/)\n- [المقالة السابقة no-vary-search](https://murakkaz.vercel.app/article/no-vary-search) مرتبطة بشكل مهم بهذا الموضوع",
+        "content": "- [MDN – HTTP QUERY Method Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)\n- [RFC 10008 – The HTTP QUERY Method Specification](https://www.rfc-editor.org/rfc/rfc10008.html)\n- [المقالة السابقة no-vary-search](https://murakkaz.vercel.app/article/no-vary-search) مرتبطة بشكل مهم بهذا الموضوع",
         "id": "b45e9d0a-c13a-4e07-8058-0532ee7dc540",
         "image": null,
         "title": "المصادر"

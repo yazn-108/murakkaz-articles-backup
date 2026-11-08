@@ -95,6 +95,20 @@
     "title": "ماهو No-Vary-Search في عالم الـcaching؟"
   },
   {
+    "SubscribersNotified": false,
+    "_id": "6af092f97a1820aedb5ff8f6",
+    "banner": {
+      "alt": "query-request-method",
+      "public_id": "mvuqwcfkwzh4vcxybkyr",
+      "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1794151160/mvuqwcfkwzh4vcxybkyr.png"
+    },
+    "createdAt": "2026-11-08T00:00:00.000Z",
+    "description": "صدرت HTTP Request Method جديدة اسمها QUERY وهي ميثد تجمع ما بين نظافة ميثد POST وامكانيات ميثد GET مثل الكاش وما شابه بالاضافة إلى امكانية ارسال ركويست بعدد querys اكبر ولكن كـbody مثل الموجود في ميثد POST.",
+    "slug": "query-request-method",
+    "tag": "http-request-methods",
+    "title": "ميثد QUERY الجديدة في HTTP Request Methods"
+  },
+  {
     "SubscribersNotified": true,
     "_id": "69d8f872b462f2a74b60b330",
     "banner": {

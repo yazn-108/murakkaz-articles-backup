@@ -148,10 +148,7 @@
         "title": "المشكلة التي قامت بحلها QUERY Method بشكل مميز"
       },
       {
-        "code": {
-          "content": "QUERY /api/products HTTP/1.1",
-          "language": "http"
-        },
+        "code": null,
         "content": "هذه من النقاط المهمة التي يجب الانتباه لها.\nفي GET يعتمد الـ Cache Key عادةً على عنوان URL والـ Headers ذات الصلة؛ لكن مع QUERY أصبح عندنا Request Body يحتوي على شروط البحث، وبالتالي لا يكفي الاعتماد على URL وحده لتحديد الطلب.\n\nمثلاً عند إرسال الطلبين التاليين:",
         "id": "7d412af6-d73d-4ddb-ad0f-2573de713c5b",
         "image": null,
@@ -159,7 +156,7 @@
       },
       {
         "code": {
-          "content": "{\n  \"category\": \"electronics\"\n}",
+          "content": "QUERY /api/products HTTP/1.1\n\n{\n  \"category\": \"electronics\"\n}",
           "language": "http"
         },
         "content": "الطلب الأول:",
@@ -169,7 +166,7 @@
       },
       {
         "code": {
-          "content": "{\n  \"category\": \"clothing\"\n}",
+          "content": "QUERY /api/products HTTP/1.1\n\n{\n  \"category\": \"clothing\"\n}",
           "language": "http"
         },
         "content": "والطلب الثاني:",
@@ -213,7 +210,7 @@
       },
       {
         "code": null,
-        "content": "الفكرة من QUERY ليست استبدال GET أو POST، وإنما توفير خيار ثالث عندما تكون عملية البحث معقدة وتحتاج إلى إرسال بيانات داخل Request Body.\n\nفبدلاً من استخدام POST لتنفيذ استعلامات لا تحتاج إلى تغيير بيانات السيرفر، أصبح عندنا ميثود مخصصة لهذا الغرض وتوفر خصائص Safe و Idempotent، مع إمكانية الاستفادة من Caching وفق القواعد المحددة في المواصفة.",
+        "content": "الفكرة من QUERY ليست استبدال GET أو POST، وإنما توفير خيار ثالث عندما تكون عملية البحث معقدة وتحتاج إلى إرسال بيانات داخل Request Body.\nفبدلاً من استخدام POST لتنفيذ استعلامات لا تحتاج إلى تغيير بيانات السيرفر، أصبح عندنا ميثود مخصصة لهذا الغرض وتوفر خصائص Safe و Idempotent، مع إمكانية الاستفادة من Caching وفق القواعد المحددة في المواصفة.",
         "id": "8dfed460-dc14-4c75-8cb6-c16141d144f8",
         "image": null,
         "title": "الخلاصة"

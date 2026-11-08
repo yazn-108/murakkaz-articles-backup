@@ -102,6 +102,15 @@
       "public_id": "mvuqwcfkwzh4vcxybkyr",
       "url": "https://res.cloudinary.com/dki71zmkb/image/upload/v1794151160/mvuqwcfkwzh4vcxybkyr.png"
     },
+    "blocks": [
+      {
+        "code": null,
+        "content": "\nhttps://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY\n\nhttps://www.rfc-editor.org/rfc/rfc10008.html\n\nhttps://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/",
+        "id": "b45e9d0a-c13a-4e07-8058-0532ee7dc540",
+        "image": null,
+        "title": "المصادر"
+      }
+    ],
     "createdAt": "2026-11-08T00:00:00.000Z",
     "description": "صدرت HTTP Request Method جديدة اسمها QUERY وهي ميثد تجمع ما بين نظافة ميثد POST وامكانيات ميثد GET مثل الكاش وما شابه بالاضافة إلى امكانية ارسال ركويست بعدد querys اكبر ولكن كـbody مثل الموجود في ميثد POST.",
     "slug": "query-request-method",

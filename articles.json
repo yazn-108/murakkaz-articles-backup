@@ -140,7 +140,7 @@
       }
     ],
     "createdAt": "2026-11-08T00:00:00.000Z",
-    "description": "صدرت HTTP Request Method جديدة اسمها QUERY وهي ميثد تجمع ما بين نظافة ميثد POST وامكانيات ميثد GET مثل الكاش وما شابه بالاضافة إلى امكانية ارسال ركويست بعدد querys اكبر ولكن كـbody مثل الموجود في ميثد POST.",
+    "description": "ميثود QUERY هي ميثود جديدة في بروتوكول HTTP، صُممت لتوفير طريقة لإرسال استعلامات إلى السيرفر باستخدام HTTP Request، مع إمكانية إرسال بيانات الاستعلام داخل الـ Request Body بدلاً من وضعها في الـ URL مثل GET.",
     "slug": "query-request-method",
     "tag": "http-request-methods",
     "title": "ميثد QUERY الجديدة في HTTP Request Methods"

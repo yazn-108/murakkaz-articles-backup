@@ -1,6 +1,6 @@
 [
   {
-    "SubscribersNotified": false,
+    "SubscribersNotified": true,
     "_id": "6a04a138e24ede0f1c992fd9",
     "banner": {
       "alt": "مفهوم No-Vary-Search في Browser caching",

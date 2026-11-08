@@ -105,7 +105,35 @@
     "blocks": [
       {
         "code": null,
-        "content": "- [MDN – HTTP QUERY Method Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)\n- [RFC 10008 – The HTTP QUERY Method Specification](https://www.rfc-editor.org/rfc/rfc10008.html)\n- [NashTech – HTTP QUERY: Bridging GET and POST](https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/)",
+        "content": null,
+        "id": "9c06a981-6ee1-469c-ba85-2ee4cf3542ba",
+        "image": null,
+        "title": "ماهي QUERY Method؟"
+      },
+      {
+        "code": null,
+        "content": null,
+        "id": "8f13fa46-a2e9-44c8-bc3e-560530d90a38",
+        "image": null,
+        "title": "المشكلة السابقة قبل صدور QUERY Method"
+      },
+      {
+        "code": null,
+        "content": null,
+        "id": "2be0cab2-0e6d-40c8-a820-63639f1d67a3",
+        "image": null,
+        "title": "المشكلة التي قامت بحلها QUERY Method بشكل مميز"
+      },
+      {
+        "code": null,
+        "content": null,
+        "id": "7d412af6-d73d-4ddb-ad0f-2573de713c5b",
+        "image": null,
+        "title": "مثال عملي"
+      },
+      {
+        "code": null,
+        "content": "\n[https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)\n[https://www.rfc-editor.org/rfc/rfc10008.html](https://www.rfc-editor.org/rfc/rfc10008.html)\n[https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/](https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/)",
         "id": "b45e9d0a-c13a-4e07-8058-0532ee7dc540",
         "image": null,
         "title": "المصادر"

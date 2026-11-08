@@ -105,7 +105,7 @@
     "blocks": [
       {
         "code": null,
-        "content": "\n(https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)[https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY]\n\nhttps://www.rfc-editor.org/rfc/rfc10008.html\n\nhttps://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/",
+        "content": "\n[https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/QUERY)\n[https://www.rfc-editor.org/rfc/rfc10008.html](https://www.rfc-editor.org/rfc/rfc10008.html)\n[https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/](https://blog.nashtechglobal.com/http-query-the-new-http-method-that-bridges-get-and-post/)",
         "id": "b45e9d0a-c13a-4e07-8058-0532ee7dc540",
         "image": null,
         "title": "المصادر"

@@ -44,6 +44,26 @@
         "title": "مثال عملي"
       },
       {
+        "code": {
+          "content": "let requestCount = 0;\n\nexport async function GET() {\n  requestCount++;\n\n  return Response.json(\n    {\n      requestCount,\n      generatedAt: new Date().toISOString(),\n    },\n    {\n      headers: {\n        \"Cache-Control\": \"public, max-age=3600\",\n        \"No-Vary-Search\": 'params=(\"utm_source\")',\n      },\n    }\n  );\n}",
+          "language": "ts"
+        },
+        "content": "اول شيء كود السيرفر ورح يكون باستخدام Nextjs وطبعا انت غير مقيد بتقنية معينة وبامكانك تجرب باستخدام اي تقنية تسمحلك بانشاء سيرفر تجريبي",
+        "id": "38f07d68-010b-45f9-8b0f-b185f39c3153",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "GET /api/test?utm_source=linkedin\nGET /api/test?utm_source=telegram",
+          "language": "http"
+        },
+        "content": "جرب تستدعي الرابطين وشوف كيف ان قيمة requestCount ما رح تتغير بعد استدعاء اول واحد منهما",
+        "id": "7507a67a-2eda-402b-a86c-be78284e9107",
+        "image": null,
+        "title": null
+      },
+      {
         "code": null,
         "content": "[Harry Roberts](https://csswizardry.com/2026/05/better-browser-caching-with-no-vary-search/)\n[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/No-Vary-Search)",
         "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",

@@ -65,6 +65,20 @@
       },
       {
         "code": null,
+        "content": "بينما لو استدعيت بعدهم الرابط التالي رح تصبح قيمة requestCount بـ 2 وهذا يعيني انه تجاهل تغير utm_source بعد ما تكيشت في اول مرة بينما لم يتجاهل بقية الـQuery Parameters مهما تغيرت وتكيشت",
+        "id": "97ab63e3-158e-4de6-a543-d84675286d09",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "لازم تكون حذر جدا في موضوع الـCaching لأن الكاش الخطأ = حمل زائد على ذاكرة سيرفر الـCaching وبالتالي نتيجة عكسية لفائدة الـCaching اللي هدفها تسريع تحميل البيانات للزوار",
+        "id": "957c8a97-a0bd-4eac-9a43-7b69f811b019",
+        "image": null,
+        "title": "الخلاصة"
+      },
+      {
+        "code": null,
         "content": "[Harry Roberts](https://csswizardry.com/2026/05/better-browser-caching-with-no-vary-search/)\n[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/No-Vary-Search)",
         "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",
         "image": null,

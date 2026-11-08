@@ -1,6 +1,6 @@
 [
   {
-    "SubscribersNotified": true,
+    "SubscribersNotified": false,
     "_id": "6a04a138e24ede0f1c992fd9",
     "banner": {
       "alt": "مفهوم No-Vary-Search في Browser caching",
@@ -86,60 +86,6 @@
         "id": "a2dedb44-a8ea-4655-b0e4-3134c0409d08",
         "image": null,
         "title": "المصادر"
-      },
-      {
-        "code": null,
-        "content": "الاثنين يتحكمان في كيفية تحديد الـ Cache ما إذا كان يستطيع إعادة استخدام Response مخزّن مسبقاً، لكن كل واحد يعالج نوعاً مختلفاً من الاختلافات في الطلبات.",
-        "id": "2c440ed8-9d9b-4821-862e-e2b6e38d98c1",
-        "image": null,
-        "title": "الفرق بين Vary وNo-Vary-Search"
-      },
-      {
-        "code": {
-          "content": "HTTP/1.1 200 OK\nVary: Accept-Language",
-          "language": "http"
-        },
-        "content": "يُستخدم Vary لتحديد الـ HTTP Request Headers التي يجب على الـ Cache أخذها في الاعتبار عند تحديد ما إذا كان يمكن إعادة استخدام Response سابق او لا.\n\nمثلاً، السيرفر يعيد:",
-        "id": "ea99ee41-8d1f-4e00-bb99-be5ba2d51233",
-        "image": null,
-        "title": "Vary"
-      },
-      {
-        "code": {
-          "content": "GET /articles\nAccept-Language: ar",
-          "language": "http"
-        },
-        "content": "لنفترض أن لدينا طلبين:\n\nالطلب الأول:",
-        "id": "bfa06f0a-dfce-4cfc-9a0a-cefecc0062b8",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": {
-          "content": "GET /articles\nAccept-Language: en",
-          "language": "http"
-        },
-        "content": "الطلب الثاني:",
-        "id": "715c1841-b4fe-4be3-9a46-b6c5c6a6ae1a",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": {
-          "content": "Vary: Accept-Language",
-          "language": "http"
-        },
-        "content": "رغم أن الـ URL متطابق، فإن قيمة Accept-Language مختلفة.\nوبما أن السيرفر حدد:",
-        "id": "e0be0ad0-ba83-4b95-86de-8868b48c035b",
-        "image": null,
-        "title": null
-      },
-      {
-        "code": null,
-        "content": "فإن الـ Cache يتعامل معهما كنسختين مختلفتين من المورد.\n\n● طلب العربية ← Cache Entry للعربية.\n● طلب الإنجليزية ← Cache Entry للإنجليزية.",
-        "id": "414b2a56-6ad8-4880-9cb3-a0a97bce2c68",
-        "image": null,
-        "title": null
       }
     ],
     "createdAt": "2026-11-08T00:00:00.000Z",

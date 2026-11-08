@@ -105,31 +105,118 @@
     "blocks": [
       {
         "code": null,
-        "content": null,
+        "content": "هي HTTP Method مخصصة لتنفيذ عمليات البحث والاستعلام عن البيانات من السيرفر (Server-side Queries).\nبدلاً من إرسال معايير البحث داخل URL، تستطيع إرسالها داخل Request Body، وهذا يعطيك مرونة أكبر عند التعامل مع استعلامات تحتوي على بيانات كثيرة أو معقدة.",
         "id": "9c06a981-6ee1-469c-ba85-2ee4cf3542ba",
         "image": null,
         "title": "ماهي QUERY Method؟"
       },
       {
-        "code": null,
-        "content": null,
+        "code": {
+          "content": "GET /api/products?category=electronics&minPrice=100&maxPrice=500&sort=price HTTP/1.1\nHost: example.com",
+          "language": "http"
+        },
+        "content": "قبل ظهور QUERY، كان عندنا خياران شائعان لتنفيذ عمليات البحث.\n\nالخيار الأول: استخدام GET\nمثلاً لو أردنا البحث عن منتجات وفق عدة شروط:",
         "id": "8f13fa46-a2e9-44c8-bc3e-560530d90a38",
         "image": null,
         "title": "المشكلة السابقة قبل صدور QUERY Method"
       },
       {
+        "code": {
+          "content": "POST /api/products HTTP/1.1\nHost: example.com\nContent-Type: application/json\n\n{\n  \"category\": \"electronics\",\n  \"minPrice\": 100,\n  \"maxPrice\": 500,\n  \"sort\": \"price\"\n}",
+          "language": "http"
+        },
+        "content": "لكن ماذا لو أصبح عندنا عدد كبير من شروط البحث؟ أو أردنا إرسال بيانات متداخلة ومعقدة؟\nهنا تظهر عدة مشاكل:\n\nقد يصبح الـ URL طويلاً جداً ويتجاوز الحدود التي تدعمها بعض الأنظمة.\n\nنحتاج إلى Encoding للبيانات حتى نستطيع وضعها داخل URL.\nعناوين URL أكثر عرضة للظهور في سجلات السيرفرات والـ Proxies وسجل المتصفح.\nكل مجموعة مختلفة من معايير البحث تنتج URL مختلفاً.\n\nالخيار الثاني: استخدام POST\nنستطيع تجاوز مشكلة طول URL عن طريق إرسال بيانات البحث داخل Request Body:",
+        "id": "d5826ae4-269d-4921-b776-0c41755dd0a0",
+        "image": null,
+        "title": null
+      },
+      {
         "code": null,
-        "content": null,
+        "content": "لكن هنا تظهر مشكلة مختلفة.\n\nPOST لا يمتلك خصائص Safe و Idempotent افتراضياً، وبالتالي لا تستطيع الأنظمة معرفة أن الطلب مخصص للاستعلام الآمن فقط من خلال الميثود نفسها.\n\nيعني باختصار أصبح عندنا خياران:\n\nGET مناسب لجلب البيانات، لكن بيانات البحث تكون داخل URL.\nPOST يسمح بإرسال البيانات داخل Body، لكن لا يضمن دلالات Safe و Idempotent.\n",
+        "id": "bfbef087-f473-41b9-aa35-9a730ff292fb",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "QUERY /api/products HTTP/1.1\nHost: example.com\nContent-Type: application/json\n\n{\n  \"category\": \"electronics\",\n  \"minPrice\": 100,\n  \"maxPrice\": 500,\n  \"sort\": \"price\"\n}",
+          "language": "http"
+        },
+        "content": "هنا جاءت QUERY لسد الفجوة بين GET و POST.\n\nبدلاً من الاختيار بين إرسال البيانات داخل URL أو استخدام POST، أصبح بإمكاننا إرسال بيانات الاستعلام داخل Request Body مع الاحتفاظ بخصائص Safe و Idempotent.\n\nيعني نفس المثال السابق يمكن كتابته باستخدام QUERY:",
         "id": "2be0cab2-0e6d-40c8-a820-63639f1d67a3",
         "image": null,
         "title": "المشكلة التي قامت بحلها QUERY Method بشكل مميز"
       },
       {
-        "code": null,
-        "content": null,
+        "code": {
+          "content": "QUERY /api/products HTTP/1.1",
+          "language": "http"
+        },
+        "content": "هذه من النقاط المهمة التي يجب الانتباه لها.\n\nفي GET يعتمد الـ Cache Key عادةً على عنوان URL والـ Headers ذات الصلة.\n\nلكن مع QUERY أصبح عندنا Request Body يحتوي على شروط البحث، وبالتالي لا يكفي الاعتماد على URL وحده لتحديد الطلب.\n\nمثلاً عند إرسال الطلبين التاليين:",
         "id": "7d412af6-d73d-4ddb-ad0f-2573de713c5b",
         "image": null,
+        "title": "طيب ماذا عن الـ Caching؟"
+      },
+      {
+        "code": {
+          "content": "{\n  \"category\": \"electronics\"\n}",
+          "language": "http"
+        },
+        "content": "الطلب الأول:",
+        "id": "c488733d-4908-4e6f-befa-d3450b0e42ae",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "{\n  \"category\": \"clothing\"\n}",
+          "language": "http"
+        },
+        "content": "والطلب الثاني:",
+        "id": "c34c9adc-647d-4386-a49a-7e27a19099a6",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "لاحظ أن كلا الطلبين يستخدم نفس URL، لكن النتائج مختلفة تماماً.\n\nلذلك تشترط المواصفة أن يأخذ الـ Cache Key محتوى Request Body والـ Metadata المرتبطة به في الاعتبار.\n\nوهنا يجب أن تكون حذراً جداً عند التعامل مع Caching، لأن استخدام Cache Key غير صحيح قد يؤدي إلى إرجاع نتائج استعلام مختلف.",
+        "id": "77455930-5bc5-4f03-a4f7-e64e67c8a87c",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": {
+          "content": "QUERY /api/products HTTP/1.1\nHost: example.com\nContent-Type: application/json\nAccept: application/json\n\n{\n  \"filters\": {\n    \"category\": \"electronics\",\n    \"price\": {\n      \"min\": 100,\n      \"max\": 1000\n    },\n    \"rating\": {\n      \"gte\": 4\n    },\n    \"inStock\": true\n  },\n  \"sort\": {\n    \"by\": \"price\",\n    \"order\": \"asc\"\n  },\n  \"pagination\": {\n    \"page\": 1,\n    \"limit\": 20\n  }\n}",
+          "language": "http"
+        },
+        "content": "لنفترض أننا نعمل على متجر إلكتروني ونريد توفير نظام بحث متقدم عن المنتجات.\n\nالمستخدم يستطيع تحديد التصنيف والسعر والتقييم وحالة توفر المنتج، بالإضافة إلى طريقة ترتيب النتائج.\n\nبدلاً من وضع جميع هذه البيانات داخل URL، نستطيع إرسالها باستخدام QUERY:",
+        "id": "90b24ae7-14b5-49b3-88e1-b83d66dfcb0a",
+        "image": null,
         "title": "مثال عملي"
+      },
+      {
+        "code": {
+          "content": "const response = await fetch(\"/api/products\", {\n  method: \"QUERY\",\n  headers: {\n    \"Content-Type\": \"application/json\",\n    \"Accept\": \"application/json\"\n  },\n  body: JSON.stringify({\n    filters: {\n      category: \"electronics\",\n      price: {\n        min: 100,\n        max: 1000\n      },\n      rating: {\n        gte: 4\n      },\n      inStock: true\n    },\n    sort: {\n      by: \"price\",\n      order: \"asc\"\n    },\n    pagination: {\n      page: 1,\n      limit: 20\n    }\n  })\n});\n\nconst data = await response.json();",
+          "language": "javascript"
+        },
+        "content": "وبالتالي يستطيع السيرفر معالجة شروط البحث وإرجاع النتائج المناسبة دون الحاجة إلى وضع جميع هذه المعايير داخل URL.\n\nويمكنك أيضاً تنفيذ الطلب باستخدام Fetch API:",
+        "id": "5628fa7b-bcaf-40bc-a5e4-799c388d67de",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "ملاحظة: يجب أن يكون السيرفر داعماً للميثود QUERY ولصيغة البيانات المرسلة. كما أن استخدام QUERY عبر نطاق مختلف يتطلب CORS Preflight.",
+        "id": "e89af6b2-fe68-47bc-a82b-aac1404d6aa6",
+        "image": null,
+        "title": null
+      },
+      {
+        "code": null,
+        "content": "الفكرة من QUERY ليست استبدال GET أو POST، وإنما توفير خيار ثالث عندما تكون عملية البحث معقدة وتحتاج إلى إرسال بيانات داخل Request Body.\n\nفبدلاً من استخدام POST لتنفيذ استعلامات لا تحتاج إلى تغيير بيانات السيرفر، أصبح عندنا ميثود مخصصة لهذا الغرض وتوفر خصائص Safe و Idempotent، مع إمكانية الاستفادة من Caching وفق القواعد المحددة في المواصفة.",
+        "id": "8dfed460-dc14-4c75-8cb6-c16141d144f8",
+        "image": null,
+        "title": "الخلاصة"
       },
       {
         "code": null,
@@ -140,7 +227,7 @@
       }
     ],
     "createdAt": "2026-11-08T00:00:00.000Z",
-    "description": "ميثود QUERY هي ميثود جديدة في بروتوكول HTTP، صُممت لتوفير طريقة لإرسال استعلامات إلى السيرفر باستخدام HTTP Request، مع إمكانية إرسال بيانات الاستعلام داخل الـ Request Body بدلاً من وضعها في الـ URL مثل GET.",
+    "description": "ميثود QUERY هي ميثود جديدة في بروتوكول HTTP، تم توثيقها في RFC 10008 في يونيو 2026.\n\nفكرتها ببساطة أنها تسمح لك بإرسال استعلامات إلى السيرفر داخل الـ Request Body بدلاً من وضع جميع بيانات البحث داخل الـ URL مثل GET، مع المحافظة على خصائص Safe و Idempotent.",
     "slug": "query-request-method",
     "tag": "http-request-methods",
     "title": "ميثد QUERY الجديدة في HTTP Request Methods"
